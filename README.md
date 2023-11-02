@@ -13,6 +13,8 @@ The "AAS-Webclient" is a project of students of the Baden-Wuerttemberg Cooperati
 - A PC
 - A Server
 - Data
+- Docker
+- Node.js
 ## Current Tasks
 - Requirement Documentation
 - Duty & Specification (Pflicht und Lastenheft)
