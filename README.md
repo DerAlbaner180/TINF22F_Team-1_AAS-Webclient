@@ -27,7 +27,7 @@ The "AAS-Webclient" is a project of students of the Baden-Wuerttemberg Cooperati
 - https://www.iosb-ina.fraunhofer.de/de/aktuelles_news/2023/aas-portal.html
 - https://github.com/FraunhoferIOSB/AASPortal
 
-## Aktualisieren unseres Projkets mit Frauenhofer Fortschritt
+## Aktualisieren unseres Projekts mit Frauenhofer Fortschritt
 - git fetch origin
 - git merge origin/main
   
