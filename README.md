@@ -10,18 +10,16 @@ The "AAS-Webclient" is a project of students of the Baden-Wuerttemberg Cooperati
 - Rafael Sancho Pernas  (Developer)
 - Kyle Zieher           (Test Manager) 
 ## Prerequisit
-- A PC
-- A Server
-- Data
+- A Computer 
+- A Webserver
+- AAS-Data
 - Docker
 - Node.js
 ## Current Tasks
-- Requirement Documentation
-- Duty & Specification (Pflicht und Lastenheft)
-- Search Informations about AAS-Servers
 - Learn React
 - Analyse current State
 - look for Improvements-Ideas
+- Create an improved UI Prototype
 ## More Info
 - Link vorherige Gruppe: https://github.com/mercal03/TINF21C_Team1_AAS-Server-Webclient
 - https://www.iosb-ina.fraunhofer.de/de/aktuelles_news/2023/aas-portal.html
