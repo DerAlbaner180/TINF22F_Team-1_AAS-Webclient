@@ -21,11 +21,12 @@ The "AAS-Webclient" is a project of students of the Baden-Wuerttemberg Cooperati
 - look for Improvements-Ideas
 - Create an improved UI Prototype
 ## More Info
-- Link vorherige Gruppe: https://github.com/mercal03/TINF21C_Team1_AAS-Server-Webclient
+- Link of past Group: https://github.com/mercal03/TINF21C_Team1_AAS-Server-Webclient
 - https://www.iosb-ina.fraunhofer.de/de/aktuelles_news/2023/aas-portal.html
 - https://github.com/FraunhoferIOSB/AASPortal
+- Our Wiki
 
-## Aktualisieren unseres Projekts mit Frauenhofer Fortschritt
+## Updating our Project with Frauenhofer Improvements
 - git fetch origin
 - git merge origin/main
   
