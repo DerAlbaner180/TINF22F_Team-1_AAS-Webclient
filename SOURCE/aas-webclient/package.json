@@ -1,6 +1,6 @@
 {
     "name": "aas-webclient",
-    "homepage": "https://deralbaner180.github.io/TINF22F_Team-1_AAS-Webclient/SOURCE/aas-webclient/public",
+    "homepage": "https://deralbaner180.github.io/TINF22F_Team-1_AAS-Webclient/SOURCE/aas-webclient/build",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
