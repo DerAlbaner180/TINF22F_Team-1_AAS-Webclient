@@ -24,7 +24,7 @@ class AssetBody extends React.Component {
         if (window.sessionStorage.getItem("shellBody") !== null) {
             return (
                 <div className="m-2 p-2 overflow-auto w-100">
-                    <h3 className="">{shell.idShort}</h3>
+                    <h3 className="">{shell.idShort}</h3> {/*Name des Assets*/}
 
                     <div className={"d-flex flex-column my-3"}>
                         <div className={"d-flex flex-row"}>
@@ -42,11 +42,14 @@ class AssetBody extends React.Component {
                                     {Object.entries(shell).map(([key, value]) => {
                                         if (typeof value !== "object" && key !== "idShort") {
                                             if (value.toString().search("attachment") === -1) {
+                                                console.log(key)
+                                                console.log(shell)
                                                 return (
                                                     <tr>
                                                         <td>
-                                                            <p className="key">{key}</p>
-                                                            <p className="value">{value === '' ? '-' : value}</p>
+                                                            <p className="key">{key}</p>{/* id, idEndides, apiVersion( die Assetinfo) */}
+
+                                                            <p className="value">{value === '' ? '-' : value}</p>  {/* die Werte der Assetinfo*/}
                                                             <hr></hr>
                                                         </td>
                                                     </tr>

@@ -9,6 +9,7 @@ class Item extends React.Component {
         
         document.getElementById("")
         let parent = document.getElementById(this.props.shell.idShort).parentElement;
+        console.log(this.props)
         let children = Array.from(parent.children);
         children.map(function (item){
         item.classList.remove("bg-primary-subtle");
@@ -29,6 +30,7 @@ class Item extends React.Component {
     render() {
         let name = this.props.shell.idShort;
         let image = this.props.shell.image ? this.props.shell.image : "";
+
         return (
             <div id={name} onClick={this.openAsset} className={"item p-2 my-2 d-sm-flex justify-content-between align-items-center list-group-item-action list-group-item border shadow-sm rounded"}>
                 <img style={{maxHeight: "50px"}} src={image} alt={""}/>

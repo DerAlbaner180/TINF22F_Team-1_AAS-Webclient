@@ -122,20 +122,28 @@ async function getFullShellData() {
 
                 let submodelIds = [];
                 if (element.submodels) {
+                    console.log("Element")
+                    console.log(element)
                     for (let i = 0; i < element.submodels.length; i++) {
                         if (element.submodels[i]["keys"][0]) {
-                            submodelIds.push(element.submodels[i]["keys"][0]["value"]);
+                            submodelIds.push(
+                                element.submodels[i]["keys"][0]["value"] //Submodelname
+                               );
                         }
                     }
                 }
-
+                console.log("Submodels")
+                for(let i=0; i<submodelIds.length;i++){
+                    console.log(submodelIds[i])
+                }
                 return {
                     idShort: element.idShort,
                     id: id,
                     idEncoded: btoa(id),
                     apiVersion: apiVersion,
-                    submodels: submodelIds
-                }
+                    globalAssetId: element.assetInformation.globalAssetId,
+                    Assetsubmodels: submodelIds
+                };
             });
         }
     }).catch(err => {
@@ -145,6 +153,8 @@ async function getFullShellData() {
 
     if (shells !== undefined) {
         window.sessionStorage.setItem("shells", JSON.stringify(shells));
+        console.log("Hier sind die Shells!!!!!!!!!"); //hier ist irgendwo der Fehler
+        console.log(shells);
         window.sessionStorage.setItem("content", JSON.stringify(shells));
         index.render(<Main/>);
 
@@ -152,7 +162,7 @@ async function getFullShellData() {
         for (let i = 0; i < shells.length; i++) {
             await loadBody(shells[i]).then(shell => {
                 shells[i] = shell;
-                console.log(shell);
+                console.log(shell); //hier irgendwo muss der Fehler sein
             });
             window.sessionStorage.setItem("shells", JSON.stringify(shells));
             index.render(<Main/>);
@@ -164,6 +174,7 @@ async function getFullShellData() {
 }
 
 async function loadBody(shell) {
+    console.log("lade Body")
     let url = window.sessionStorage.getItem("url");
     url += "shells/" + (url.search("murr") === -1 ? btoa(shell.id) : encodeURIComponent(shell.id));
     url += (shell.apiVersion === 3 ? "/submodels" : "/aas/submodels");
@@ -186,6 +197,7 @@ async function loadBody(shell) {
                 let images = searchForKey(response, /[pP]roductImage\d*/);
                 if (images.length > 0) {
                     shell["image"] = images[0];
+                    console.log(images[0]);
                 }
             }
         });

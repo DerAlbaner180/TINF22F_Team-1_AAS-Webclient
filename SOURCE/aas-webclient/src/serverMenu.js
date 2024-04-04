@@ -10,7 +10,7 @@ class ServerMenu extends React.Component {
 
     componentDidMount() {
         if (window.sessionStorage.getItem("url") === null) {
-            window.sessionStorage.setItem("url", "https://ccae4836-001e-48c2-a4f9-235554f9400b.ma.bw-cloud-instance.org");
+            window.sessionStorage.setItem("url", "https://v3.admin-shell-io.com/");
             getFullShellData();
         }
     }
