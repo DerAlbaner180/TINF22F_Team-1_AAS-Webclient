@@ -1,7 +1,7 @@
 import {index, Main} from "./index";
 
 export let controller = new AbortController();
-
+console.log("Start");
 async function getData(url) {
     if (url.search("http") === -1) {
         alert("Not a correct url");
@@ -9,13 +9,16 @@ async function getData(url) {
     }
 
     controller = new AbortController();
-    // console.log("Get data of:");
-    // console.log(url);
+    console.log("Get data of:"+url);
+
     return fetch(url, {
-        signal: controller.signal
+        signal: controller.signal,
+        mode: "cors"
     })
         .then(response => {
+            console.log(response)
             return response.json().then(jsonResponse => {
+                console.log(jsonResponse)
                 return jsonResponse;
             }).catch(err => {
                 console.log(err);
@@ -97,9 +100,15 @@ async function getFullShellData() {
         window.sessionStorage.setItem("url", url);
     }
 
-    let shells = await getData(url + "shells").then(response => {
+    let shells = await getData(url + "shells").then( response => {
         if (response !== undefined) {
-            return response.map(element => {
+            console.log(response)
+            console.log( typeof response);
+            const entries= Object.entries(response)
+            console.log(entries)
+            console.log(entries[0][1])
+            console.log(entries[1])
+            return entries[0][1].map(element => {
                 if (!apiVersion) {
                     if (element["submodels"][0]["type"]) {
                         apiVersion = 3;
@@ -129,7 +138,10 @@ async function getFullShellData() {
                 }
             });
         }
-    }).catch(err => alert(err));
+    }).catch(err => {
+        console.log(err)
+        window.alert("Server lädt nicht")
+    });
 
     if (shells !== undefined) {
         window.sessionStorage.setItem("shells", JSON.stringify(shells));
