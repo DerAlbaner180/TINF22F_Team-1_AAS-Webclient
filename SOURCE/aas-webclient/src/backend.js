@@ -4,7 +4,7 @@ export let controller = new AbortController();
 console.log("Start");
 async function getData(url) {
     if (url.search("http") === -1) {
-        alert("Not a correct url");
+       // alert("Not a correct url");
         return undefined;
     }
 

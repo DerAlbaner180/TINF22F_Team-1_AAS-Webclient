@@ -9,7 +9,7 @@ class Header extends React.Component {
                     <div className="d-flex flex-wrap align-items-center justify-content-md-between justify-content-center">
                         <div><h1>AAS-Webclient</h1></div>
                         <div id="error-container">
-                                {<div id ="placeholder"></div>}
+                                <div id ="placeholder"></div>
                                 </div>
                             <nav className="d-flex flex-nowrap align-items-center justify-content-between">
                                 <span>Current Server: <a href={serverUrl} target={"_blank"}>{serverUrl}</a></span>
