@@ -3,8 +3,8 @@ The "AAS-Webclient" is a project of students of the Baden-Wuerttemberg Cooperati
 
 https://github.com/TTRSF/TINF22F-Team2-Nameplate-Generator
 ## Team Members
-- Lara Lorke            (System Architect)
 - Armin Taktar          (Project Leader)
+- Lara Lorke            (System Architect)
 - David Bauer           (Product Manager)
 - Ümmühan Ay            (Documentation)
 - Rafael Sancho Pernas  (Developer)
