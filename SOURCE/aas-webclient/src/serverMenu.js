@@ -2,6 +2,8 @@ import React from "react";
 import {controller, getFullShellData} from "./backend";
 import {index, Main} from "./index";
 import Dropdown from 'react-bootstrap/Dropdown';
+import ReactDOM from 'react-dom';
+import Error from './errorMessage';
 
 class ServerMenu extends React.Component {
     state = {
@@ -13,18 +15,35 @@ class ServerMenu extends React.Component {
             window.sessionStorage.setItem("url", "https://v3.admin-shell-io.com/");
             getFullShellData();
         }
-    }
-
-    changeServer() {
+    } changeServer() {
         controller.abort();
         window.sessionStorage.clear();
         index.render(<Main/>);
         let url = document.getElementById("server-url").value;
+        if (url == "") {
+            const errorContainer = document.getElementById('error-container');
+            if (errorContainer) {
+                ReactDOM.unmountComponentAtNode(errorContainer);
+                ReactDOM.render(<Error message = "Input can not be empty" />, errorContainer);
+                return;
+            }
+            return undefined;
+        }
+        if (!url.startsWith("http")) {
+            const errorContainer = document.getElementById('error-container');
+            if (errorContainer) {
+                ReactDOM.unmountComponentAtNode(errorContainer);
+                ReactDOM.render(<Error message = "URL has to start with http!"/>, errorContainer);
+                return;
+            }
+            return undefined;
+        }
         window.sessionStorage.setItem("url", url);
         document.getElementById("error_message_NextToSearchField").style.visibility = "hidden";
         document.getElementById("searchField").value = "";
         getFullShellData();
     }
+
 
     render() {
         return (
