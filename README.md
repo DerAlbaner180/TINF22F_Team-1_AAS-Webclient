@@ -1,10 +1,10 @@
 # TINF22F_Team-1_AAS-Webclient
 The "AAS-Webclient" is a project of students of the Baden-Wuerttemberg Cooperative State University Stuttgart, which is carried out during third and fourth semester withhin the course of the lecture "Software Engineering".
 
+https://github.com/TTRSF/TINF22F-Team2-Nameplate-Generator
 ## Team Members
-- Ilir Emini            (Project Leader)
+- Armin Taktar          (Project Leader)
 - Lara Lorke            (System Architect)
-- Armin Taktar          (System Architect)
 - David Bauer           (Product Manager)
 - Ümmühan Ay            (Documentation)
 - Rafael Sancho Pernas  (Developer)
