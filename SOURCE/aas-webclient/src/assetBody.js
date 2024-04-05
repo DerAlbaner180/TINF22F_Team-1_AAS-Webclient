@@ -1,5 +1,9 @@
 import React from "react";
 
+export function render() {
+}
+
+
 class AssetBody extends React.Component {
 
     changeContent = (event) => {

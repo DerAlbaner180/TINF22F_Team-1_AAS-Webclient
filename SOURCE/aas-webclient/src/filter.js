@@ -5,8 +5,10 @@ import DropdownItem from "react-bootstrap/DropdownItem";
 import DropdownToggle from "react-bootstrap/DropdownToggle";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
 import {getFullShellData} from "./backend";
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
+import {render} from "./assetBody";
+import {loadBody} from "./backend";
+import { openAsset } from './item';
+import './switchButton.css';
 
 class Filter extends React.Component {
     constructor(props) {
@@ -16,16 +18,38 @@ class Filter extends React.Component {
 
         };
         window.sessionStorage.setItem("mode", props.mode);
-        getFullShellData()
+        this.toggleMode = this.toggleMode.bind(this);
+        getFullShellData();
+
     }
 
-    toggleMode = (value) => {
-        const mode = value === 1 ? "user" : "expert";
-        this.setState({ mode });
-        window.sessionStorage.setItem("mode", mode);
-        console.log(window.sessionStorage.getItem("mode"));
-        getFullShellData()
-    };
+    toggleMode() {
+        const newMode = this.state.mode === 1 ? 2 : 1;
+        this.setState({ mode: newMode });
+        sessionStorage.setItem('mode', newMode === 1 ? 'user' : 'expert');
+
+        getFullShellData();
+            if (window.sessionStorage.getItem("loaded")==true){
+                console.log("nach getData")
+                const shell = JSON.parse(window.sessionStorage.getItem("shellBody"));
+                const item = document.getElementById(shell.idShort);
+
+                console.log(item.className);
+                console.log(item.id);
+                item.click();
+            }
+            console.log(window.sessionStorage.getItem("loaded"))
+
+
+
+        }
+
+
+
+
+
+
+
     filterForName() {
         //Sucht nach einem AAS name
         let searchInput = document
@@ -392,14 +416,15 @@ class Filter extends React.Component {
                     No entries found
                 </div>
                 <div>
-                    <Slider
-                        min={1}
-                        max={2}
-                        defaultValue={sliderValue} // Der Standardwert des Sliders wird basierend auf dem Modus aus der sessionStorage festgelegt
-                        onChange={this.toggleMode}
-                        marks={{ 1: 'User', 2: 'Expert' }}
-                        style={{ width: 150, marginTop: 30, margin: '0 20px' }}
-                    />
+                    <label className="switch">
+                        <input
+                            type="checkbox"
+                            checked={this.state.mode === 2}
+                            onChange={this.toggleMode}
+                        />
+                        <span className="slider round"></span>
+                    </label>
+                    <p>{this.state.mode === 2 ? 'Expert Mode' : 'User Mode'}</p>
                 </div>
 
             </div>
