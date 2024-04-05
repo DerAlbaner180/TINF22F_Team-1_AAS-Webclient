@@ -4,8 +4,28 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownItem from "react-bootstrap/DropdownItem";
 import DropdownToggle from "react-bootstrap/DropdownToggle";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
+import {getFullShellData} from "./backend";
+import Slider from "rc-slider";
+import "rc-slider/assets/index.css";
 
 class Filter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            mode: "user"
+
+        };
+        window.sessionStorage.setItem("mode", props.mode);
+        getFullShellData()
+    }
+
+    toggleMode = (value) => {
+        const mode = value === 1 ? "user" : "expert";
+        this.setState({ mode });
+        window.sessionStorage.setItem("mode", mode);
+        console.log(window.sessionStorage.getItem("mode"));
+        getFullShellData()
+    };
     filterForName() {
         //Sucht nach einem AAS name
         let searchInput = document
@@ -261,6 +281,8 @@ class Filter extends React.Component {
 
 
     render() {
+        const { mode } = this.state;
+        const sliderValue = mode === "user" ? 1 : 2;
         const sort =
             <Dropdown
                 className="my-dropdown"
@@ -369,9 +391,26 @@ class Filter extends React.Component {
                      style={{visibility: "hidden", color: "darkred"}}>
                     No entries found
                 </div>
+                <div>
+                    <Slider
+                        min={1}
+                        max={2}
+                        defaultValue={sliderValue} // Der Standardwert des Sliders wird basierend auf dem Modus aus der sessionStorage festgelegt
+                        onChange={this.toggleMode}
+                        marks={{ 1: 'User', 2: 'Expert' }}
+                        style={{ width: 150, marginTop: 30, margin: '0 20px' }}
+                    />
+                </div>
+
             </div>
+
+
         );
+
+
+
     }
+
 }
 
 export default Filter;

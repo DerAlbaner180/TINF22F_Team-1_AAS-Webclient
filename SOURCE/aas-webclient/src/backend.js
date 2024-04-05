@@ -124,26 +124,39 @@ async function getFullShellData() {
                 if (element.submodels) {
                     console.log("Element")
                     console.log(element)
+
+                    console.log("Bildpfad: ")
+                    console.log(element.assetInformation.defaultThumbnail)
                     for (let i = 0; i < element.submodels.length; i++) {
                         if (element.submodels[i]["keys"][0]) {
                             submodelIds.push(
                                 element.submodels[i]["keys"][0]["value"] //Submodelname
-                               );
+                            );
                         }
                     }
                 }
                 console.log("Submodels")
                 for(let i=0; i<submodelIds.length;i++){
                     console.log(submodelIds[i])
+
                 }
-                return {
-                    idShort: element.idShort,
-                    id: id,
-                    idEncoded: btoa(id),
-                    apiVersion: apiVersion,
-                    globalAssetId: element.assetInformation.globalAssetId,
-                    Assetsubmodels: submodelIds
-                };
+                const mode=window.sessionStorage.getItem("mode");
+                if (mode=="expert"){
+                    return {
+                        idShort: element.idShort,
+                        id: id,
+                        idEncoded: btoa(id),
+                        apiVersion: apiVersion,
+                        globalAssetId: element.assetInformation.globalAssetId,
+                        Assetsubmodels: submodelIds
+                    };
+
+                }else {
+                    return {
+                        idShort: element.idShort,
+                        id: id,
+                    };
+                }
             });
         }
     }).catch(err => {
