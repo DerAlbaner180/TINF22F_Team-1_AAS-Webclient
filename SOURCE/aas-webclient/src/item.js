@@ -3,10 +3,16 @@ import "./style.css";
 import {index, Main} from "./index";
 import {loadBody} from "./backend";
 
+export function openAsset() {
+}
+
+
 class Item extends React.Component {
 
     openAsset = (e) => {
-        
+        console.log(e)
+        console.log("wird geöffnet")
+
         document.getElementById("")
         let parent = document.getElementById(this.props.shell.idShort).parentElement;
         console.log(this.props)
@@ -41,5 +47,6 @@ class Item extends React.Component {
         );
     }
 }
+
 
 export default Item;

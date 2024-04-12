@@ -102,12 +102,12 @@ async function getFullShellData() {
 
     let shells = await getData(url + "shells").then( response => {
         if (response !== undefined) {
-            console.log(response)
-            console.log( typeof response);
+            //console.log(response)
+            //console.log( typeof response);
             const entries= Object.entries(response)
-            console.log(entries)
-            console.log(entries[0][1])
-            console.log(entries[1])
+            //console.log(entries)
+            //console.log(entries[0][1])
+            //console.log(entries[1])
             return entries[0][1].map(element => {
                 if (!apiVersion) {
                     if (element["submodels"][0]["type"]) {
@@ -122,11 +122,11 @@ async function getFullShellData() {
 
                 let submodelIds = [];
                 if (element.submodels) {
-                    console.log("Element")
-                    console.log(element)
+                    //console.log("Element")
+                    //console.log(element)
 
-                    console.log("Bildpfad: ")
-                    console.log(element.assetInformation.defaultThumbnail)
+                    //console.log("Bildpfad: ")
+                    //console.log(element.assetInformation.defaultThumbnail)
                     for (let i = 0; i < element.submodels.length; i++) {
                         if (element.submodels[i]["keys"][0]) {
                             submodelIds.push(
@@ -137,7 +137,7 @@ async function getFullShellData() {
                 }
                 console.log("Submodels")
                 for(let i=0; i<submodelIds.length;i++){
-                    console.log(submodelIds[i])
+                    //console.log(submodelIds[i])
 
                 }
                 const mode=window.sessionStorage.getItem("mode");
@@ -166,14 +166,17 @@ async function getFullShellData() {
 
     if (shells !== undefined) {
         window.sessionStorage.setItem("shells", JSON.stringify(shells));
+
         console.log("Hier sind die Shells!!!!!!!!!"); //hier ist irgendwo der Fehler
         console.log(shells);
+
         window.sessionStorage.setItem("content", JSON.stringify(shells));
         index.render(<Main/>);
 
         console.log(shells);
         for (let i = 0; i < shells.length; i++) {
             await loadBody(shells[i]).then(shell => {
+                window.sessionStorage.setItem("loaded", true);
                 shells[i] = shell;
                 console.log(shell); //hier irgendwo muss der Fehler sein
             });
@@ -181,7 +184,7 @@ async function getFullShellData() {
             index.render(<Main/>);
         }
         window.sessionStorage.setItem("content", JSON.stringify(shells));
-        window.sessionStorage.setItem("loaded", true);
+
         console.log(shells);
     }
 }
