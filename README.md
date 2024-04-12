@@ -2,6 +2,9 @@
 The "AAS-Webclient" is a project of students of the Baden-Wuerttemberg Cooperative State University Stuttgart, which is carried out during third and fourth semester withhin the course of the lecture "Software Engineering".
 
 https://github.com/TTRSF/TINF22F-Team2-Nameplate-Generator
+
+Link to GitHub-Pages: https://deralbaner180.github.io/TINF22F_Team-1_AAS-Webclient/
+
 ## Team Members
 - Armin Taktar          (Project Leader)
 - Lara Lorke            (System Architect)
