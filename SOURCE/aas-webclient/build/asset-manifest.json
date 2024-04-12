@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TINF22F_Team-1_AAS-Webclient/static/css/main.3fe4733e.css",
+    "main.js": "/TINF22F_Team-1_AAS-Webclient/static/js/main.14e2c78b.js",
+    "index.html": "/TINF22F_Team-1_AAS-Webclient/index.html",
+    "main.3fe4733e.css.map": "/TINF22F_Team-1_AAS-Webclient/static/css/main.3fe4733e.css.map",
+    "main.14e2c78b.js.map": "/TINF22F_Team-1_AAS-Webclient/static/js/main.14e2c78b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fe4733e.css",
+    "static/js/main.14e2c78b.js"
+  ]
+}
