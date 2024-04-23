@@ -27,7 +27,7 @@ Link to GitHub-Pages: https://deralbaner180.github.io/TINF22F_Team-1_AAS-Webclie
 - Link of past Group: https://github.com/mercal03/TINF21C_Team1_AAS-Server-Webclient
 - https://github.com/FraunhoferIOSB/AASPortal
 - Our Wiki
-
+- Ein server, der eine BOM-Struktur erstellt: https://mnestix-lni.azurewebsites.net/viewer/aHR0cHM6Ly9hYXMyLnVuaS1oLmRlL2Fhcy9sbmkxNDcw
 
 
 ## Assets
