@@ -1,0 +1,166 @@
+#err {
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute; 
+    opacity: 1;
+  }
+
+  #placeholder{
+
+    height: 75px;
+  }
+  
+.alert {
+    -webkit-animation: fadeout 3s linear forwards;
+    animation: fadeout 3s linear forwards;
+}
+
+@-webkit-keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.item {cursor: pointer;
+}
+
+#assetBodyTable td{
+    word-break: break-word;
+}
+
+#assetBodyTable tr :nth-child(1){
+    word-break: normal;
+}
+
+#assetBodyTable tr:nth-child(1){
+    border-bottom: solid black 1px;
+}
+
+#aboutPage{
+    height: 100px;
+    width: 100px;
+    background-color: #0dcaf0;
+}
+
+.navBtn{
+    background-color: transparent;
+    color: white;
+    border-color: transparent;
+    text-decoration: none;
+}
+
+.version{
+    font-size: large;
+    margin-left: 0.6rem;
+}
+
+.my-dropdown button{
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    border-radius: 0;
+    border: none;
+}
+
+.my-dropdown button:active,
+.my-dropdown button:hover,
+.my-dropdown button:checked,
+.my-dropdown button:first-child:active{
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+}
+
+.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active{
+    background-color: transparent;
+    color: black;
+    outline: none;
+    border: none;
+}
+
+
+
+#searchField:focus,
+#searchField:active{
+    outline: none !important;
+    border: none !important;
+}
+
+.my-search-button{
+    outline:none;
+    border: none;
+    background-color: transparent;
+    padding: 0 0.7rem;
+}
+
+.search-bar-container{
+    border-radius: 1rem;
+}
+
+.asset-image{
+    width: 15rem;
+}
+
+.image-container{
+    height: fit-content;
+    padding: 2rem;
+    margin-right: 1.5rem;
+}
+
+.key{
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.value{
+    word-break: break-all;
+}
+
+.asset-table{
+    width: 100%;
+}
+
+.accordion-button::after{
+    margin-right: 0;
+}
+
+.navigation-buttons{
+    margin-right: 1.5rem;
+}
+
+.navigation-button{
+    cursor: pointer;
+    width: 15rem;
+    padding: 0.8rem 2rem;
+    box-sizing: content-box;
+}
+
+.navigation-button:hover{
+    background-color: #f3f3f3;
+}
+
+.navigation-button:active{
+    background-color: #ebebeb;
+}
+
+#autoCompleteList{
+    display: none;
+    position: absolute;
+    transform: translateY(0.4rem);
+    list-style: none;
+    padding: 0;
+    min-width: 18rem;
+    z-index: 1000;
+}
+
+.autoCompleteItem{
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+.autoCompleteItem:hover{
+    background-color: #f8f9fa;
+}
