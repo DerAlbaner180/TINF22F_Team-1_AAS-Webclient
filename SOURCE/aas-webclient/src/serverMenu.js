@@ -18,18 +18,16 @@ class ServerMenu extends React.Component {
     } changeServer() {
         controller.abort();
         let url = document.getElementById("server-url").value;
-        if (url == "") {
-            const errorContainer = document.getElementById('error-container');
-                ReactDOM.unmountComponentAtNode(errorContainer);
-                ReactDOM.render(<Error message = "Input can not be empty" />, errorContainer);
-                return;
-        }
+
+        
         if (!url.startsWith("http")) {
-            const errorContainer = document.getElementById('error-container');
+                const errorContainer = document.getElementById('error-container');
                 ReactDOM.unmountComponentAtNode(errorContainer);
                 ReactDOM.render(<Error message = "URL has to start with http!"/>, errorContainer);
                 return;
         }
+
+
         window.sessionStorage.clear();
         index.render(<Main/>);
         window.sessionStorage.setItem("url", url);
