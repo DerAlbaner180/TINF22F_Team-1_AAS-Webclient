@@ -1,0 +1,2763 @@
+{
+    "result": [
+        {
+            "idShort": "myAASwithGlobalSecurityMetaModel",
+            "id": "https://example.com/ids/aas/6543_6032_3012_5973",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.company.com/ids/asset/0164_9022_1191_7362"
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/2015_6020_3012_0585"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://example.com/ids/sm/5431_2181_3012_3929"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "AAS_WEISS_HN400607",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "https://aas.digitaltwin-vdma.org/aas/HN400607",
+            "derivedFrom": {
+                "type": "ExternalReference",
+                "keys": []
+            },
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://aas.digitaltwin-vdma.org/HN400607",
+                "defaultThumbnail": {
+                    "path": "/HN200.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://aas.digitaltwin-vdma.org/sm/0200_3113_3022_3161"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://aas.digitaltwin-vdma.org/sm/4444_3113_3022_1716"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://aas.digitaltwin-vdma.org/sm/9110_1111_3022_8966"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://aas.digitaltwin-vdma.org/sm/9140_4411_3022_8966"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://aas.digitaltwin-vdma.org/sm/4321_3113_3022_6366"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://aas.digitaltwin-vdma.org/sm/1240_3113_3022_4726"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://aas.digitaltwin-vdma.org/sm/9404_3272_4022_9046"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Festo_3S7PM0CP4BD",
+            "id": "smart.festo.com/demo/aas/1/1/454576463545648365874",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "HTTP://PK.FESTO.COM/3S7PM0CP4BD",
+                "defaultThumbnail": {
+                    "path": "/Festo_OVEL_product_rendering.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "smart.festo.com/demo/sm/instance/1/1/13B7CCD9BF7A3F24"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Bosch_NexoPistolGripNutrunner",
+            "id": "http://boschrexroth.com/shells/0608842005/917004878",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://dc-qr.com?m=0608842005&s=917004878",
+                "defaultThumbnail": {
+                    "path": "/ST_Mittelgriffschrauber_NXP_Produktbild_V01_20160822_161306.big.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/0608842005/917004878/submodels/nameplate"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/0608842005/917004878/submodels/document"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/0608842005/917004878/submodels/service"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/0608842005/917004878/submodels/identification"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Bosch_R901509807_1201694127",
+            "id": "https://boschrexroth.com/ids/aas?p=p652370&m=R90150807&s=1201694127",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://dc-qr.com?m=R901509807&s=1&f=1202044787",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpeg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Bosch_CompactModuleBallRailSystem",
+            "id": "http://boschrexroth.com/shells/R036037000/1005625831090001",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://dc-qr.com?m=R036037000&s=1005625831090001&vc=CKK-090-NN-1",
+                "defaultThumbnail": {
+                    "path": "/CKK.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036037000/1005625831090001/submodels/nameplate/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036037000/1005625831090001/submodels/document/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036037000/1005625831090001/submodels/service/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036037000/1005625831090001/submodels/identification/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036037000/1005625831090001/submodels/technicalSpecification/"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Bosch_CompactModuleToothedBeltDrive",
+            "id": "http://boschrexroth.com/shells/R036447000/1005625831070001",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://dc-qr.com?m=R036447000&s=1005625831070001",
+                "defaultThumbnail": {
+                    "path": "/CKR.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036447000/1005625831070001/submodels/nameplate/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036447000/1005625831070001/submodels/document/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036447000/1005625831070001/submodels/service/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036447000/1005625831070001/submodels/identification/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R036447000/1005625831070001/submodels/technicalSpecification/"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Bosch_PrecisionModulePSK",
+            "id": "http://boschrexroth.com/shells/R055732577/1012160102010001",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://dc-qr.com?m=R055732577&t=PSK-060-NN-1&s=1012160102010001",
+                "defaultThumbnail": {
+                    "path": "/PSK.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R055732577/1012160102010001/submodels/nameplate/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R055732577/1012160102010001/submodels/document/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R055732577/1012160102010001/submodels/service/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R055732577/1012160102010001/submodels/identification/"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://boschrexroth.com/shells/R055732577/1012160102010001/submodels/technicalSpecification/"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "PhoenixContact_R901278815_25",
+            "id": "www.company.com/ids/aas/2520_6010_8091_1277",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.company.com/ids/asset/8220_6010_8091_3593",
+                "defaultThumbnail": {
+                    "path": "/2904622.jpeg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "SE_Tesys_Island_Header",
+            "id": "www.company.com/ids/aas/2520_6010_8091_1277",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.company.com/ids/asset/8220_6010_8091_3593",
+                "defaultThumbnail": {
+                    "path": "/TPRBCEIP.PNG"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "SE_Tesys_Island_Power",
+            "id": "www.company.com/ids/aas/2520_6010_8091_1277",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.company.com/ids/asset/8220_6010_8091_3593",
+                "defaultThumbnail": {
+                    "path": "/TPRVM001.PNG"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "SE_Tesys_Island_Starter",
+            "id": "www.company.com/ids/aas/2520_6010_8091_1277",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.company.com/ids/asset/8220_6010_8091_3593",
+                "defaultThumbnail": {
+                    "path": "/TPRST009.PNG"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "SE_Modicon_M262",
+            "id": "www.company.com/ids/aas/2520_6010_8091_1277",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.company.com/ids/asset/8220_6010_8091_3593",
+                "defaultThumbnail": {
+                    "path": "/M262.PNG"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "PeFu_267075_100078",
+            "id": "www.company.com/ids/aas/8403_3140_0191_8844",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.company.com/ids/asset/1595_3140_0191_3961",
+                "defaultThumbnail": {
+                    "path": "/MAC0007059_rgb.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "dkeNamePlate",
+            "id": "www.dke.de/digitales-typenschild",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.company.com/ids/asset/3240_1162_7091_2878",
+                "defaultThumbnail": {
+                    "path": "/dke-dose.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/5171_3150_1191_6645"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/7543_3150_1191_1022"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Siemens_SITRANS_P320",
+            "id": "www.company.com/ids/aas/9460_8042_0191_4407",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://siemens.com/pimobile?1P=7MF0300-1QU01-5BF2-Z&S=N1L22110101185",
+                "defaultThumbnail": {
+                    "path": "/P_FI01_XX_05457I.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/demo/sm/instance/F9CC779860FC1039"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/demo/sm/instance/204F677FF7D40E79"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/demo/sm/instance/1D77CEFC25CEC482"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/demo/sm/instance/4F44B8B32822E483"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Siemens_S7_CPU1515",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "www.company.com/demo/aas/1234554842136874684321",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.siemens.com/ids/asset/MLFB=6ES7515-2FM00-0AB0&SN=C-E9S35353",
+                "defaultThumbnail": {
+                    "path": "/P_ST70_XX_06800J.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/demo/sm/instance/F9CC779860FC10391"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/demo/sm/instance/4F44B8B32822E483"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/demo/sm/instance/1D77CEFC25CEC482"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/demo/sm/instance/204F677FF7D40E79"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Lenze_i950",
+            "id": "http://digital.lenze.com/aas/1/1/1616441908732837000002",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://digital.lenze.com/asset/YVSBRHHZADF",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpeg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "ABB_TTF_300",
+            "id": "www.abb.com/8055_9070_1191_2593",
+            "derivedFrom": {
+                "type": "ExternalReference",
+                "keys": [
+                    {
+                        "type": "AssetAdministrationShell",
+                        "value": "www.abb.com/8055_9070_1191_2593"
+                    }
+                ]
+            },
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://productid.abb.com/9AAC129110?sn=3K650000548505",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.abb.com/ids/4834_5472_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.abb.com/ids/6113_5160_1191_8063"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.abb.com/ids/0212_0171_1391_2237"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.abb.com/ids/3213_0170_1192_3931"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Hitachi_000000001",
+            "id": "https://admin-shell.hitachi-industrial.eu/aas/1/1/000000001",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://admin-shell.hitachi-industrial.eu/asset/000000001",
+                "defaultThumbnail": {
+                    "path": "/HX_200432.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://automation.hitachi-industrial.eu/_Resources/Static/Packages/Moon.HitachiEurope/Downloads/automation/[2]%20Software/[5]%20Configuration%20Files/[1]%20Device%20Descriptions/Device%20files.zip"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Balluf_3S7PM0CP4BD",
+            "id": "www.company.com/ids/aas/1331_2102_2002_0893",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "www.company.com/ids/asset/1335_6030_3002_9939",
+                "defaultThumbnail": {
+                    "path": "/Balluff_BAE_PS-XA-1W-24-080-604-l.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2543_5072_7091_2660"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/2531_2102_2002_4116"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Festo_VUVG-L14-T32C-AT-G18-1R8L_99920200623114915000017235",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920200623114915000017235",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "HTTP://PK.FESTO.COM/3S7PNCL5RXV",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623114915000031138"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623114915000045405"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623114915000052313"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623114915000077513"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623114915000081773"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Festo_SPAU-P2R-W-G18FD-L-PNLK-PNVBA-M8U_99920200617184803000010084",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920200617184803000010084",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "HTTP://PK.FESTO.COM/3S7PN48GNYW",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617184803000034466"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617184803000045523"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617184803000056562"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617184803000076040"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617184803000080235"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617184803000092055"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Festo_OVEL-10-H-15-PQ-VQ6-UA-C-A-B2PNLK-H3_99920200616233035000015777",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920200616233035000015777",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "HTTP://PK.FESTO.COM/3S7PN9BW1TW",
+                "defaultThumbnail": {
+                    "path": "/ovel_rendering.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616233035000037130"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616233035000042566"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616233036000010657"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616233036000047055"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616233036000050815"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "smart.festo.com/demo/sm/instance/1/1/13B7CCD9BF7A3F24"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Murrelektronik_M12_Male_M12_Female_A_Kod_AAS",
+            "id": "urn:murrelektronik.com:aas:1.0:0:700421-400021-6340500-01",
+            "embeddedDataSpecifications": [],
+            "derivedFrom": {
+                "type": "ExternalReference",
+                "keys": [
+                    {
+                        "type": "AssetAdministrationShell",
+                        "value": "urn:murrelektronik.com:aas:1.0:0:700421-400021-6340500"
+                    }
+                ]
+            },
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "urn:murrelektronik.com:asset:1.0:0:700421-400021-6340500-01",
+                "defaultThumbnail": {
+                    "path": "/m12bild.PNG"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/nameplate/1212121212"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/identification/1212121212"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/technicaldata/1212121212"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/contactInformations/1212121212"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/documentation/1212121212"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Festo_EPCC-BS-32-100-3P-A_99920200623113326000013225",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920200623113326000013225",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "HTTP://PK.FESTO.COM/3S7PMT9D48W",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623113326000034637"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623113326000046613"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623113326000057332"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623113326000078235"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200623113326000083581"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Festo_EMME-AS-40-M-LV-AS_99920200617190044000012858",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920200617190044000012858",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "HTTP://PK.FESTO.COM/3S7PMVY0KD2",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617190044000037275"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617190044000046877"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617190044000050108"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617190044000062045"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617190044000074155"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200617190044000081280"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Festo_DPDM-Q-32-10-PA_99920200616214520000010828",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920200616214520000010828",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "HTTP://PK.FESTO.COM/LX7GYCQV0ZH",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616214522000018143"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616214522000027801"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616214522000030025"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616214522000068420"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616214522000072106"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Festo_DGST-16-125-E1A_99920200616215443000010836",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920200616215443000010836",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "HTTP://PK.FESTO.COM/3S7PN151JKP",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616215444000026424"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616215444000034767"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616215444000048278"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616215444000074216"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616215444000083570"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Festo_CMMT-ST-C8-1C-EC-S0_99920200616193249000010710",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920200616193249000010710",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "HTTP://PK.FESTO.COM/3S7PN21VD7H",
+                "defaultThumbnail": {
+                    "path": "/thumbnail.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616193249000033066"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616193249000044815"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616193249000054248"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616193249000081187"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920200616193249000094484"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Wittenstein_aas_xNNkj1e",
+            "id": "https://wgrp.biz/aas/xNNkj1e",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://wgrp.biz/xNNkj1e",
+                "defaultThumbnail": {
+                    "path": "/xNNkj1e.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://wgrp.biz/sm/be2f9ac88f494fd5df2408ba55369388192881c22d4d7b55c28ede71b25c7a9a"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://wgrp.biz/sm/se2f9ac88f494fd5df2408ba55369388192881c22d4d7b55c28ede71b25c7a1b"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://wgrp.biz/sm/be2f9ac88f494fd5df2408ba55369388192881c22d4d7b55c28ede71b25c7a1b"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://wgrp.biz/sm/bddeffe53baffa0dd3efb00e3280bdd80ad974d8b3380da9d8e383097d991359"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://wgrp.biz/sm/c59b6778d74f22fbdef4552a642a66b2"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://wgrp.biz/sm/d19b6778d74f22fbdef4552a642a66a2"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "SICK_AHM36B_S4QC012x12_1092017",
+            "id": "digital.sick.com/shells/1092017",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "digital.sick.com/shells/1092017/123456789",
+                "defaultThumbnail": {
+                    "path": "/AHx36.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "digital.sick.com/shells/submodels/nameplate"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "SICK_SIG200_0A0412200_1089794",
+            "id": "digital.sick.com/shells/1089794",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "digital.sick.com/shells/1089794/89abc7853",
+                "defaultThumbnail": {
+                    "path": "/sig200.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "digital.sick.com/shells/submodels/nameplate"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "SICK_WTB16I_24161120A00_1218669",
+            "id": "digital.sick.com/shells/1218669",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "digital.sick.com/shells/1218669/012345678",
+                "defaultThumbnail": {
+                    "path": "/W16.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "digital.sick.com/shells/submodels/nameplate"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Murrelektronik_M12_Male_M12_Female_A_Kod_AAS",
+            "id": "urn:murrelektronik.com:aas:1.0:0:700421-400021-6340500-01",
+            "embeddedDataSpecifications": [],
+            "derivedFrom": {
+                "type": "ExternalReference",
+                "keys": [
+                    {
+                        "type": "AssetAdministrationShell",
+                        "value": "urn:murrelektronik.com:aas:1.0:0:700421-400021-6340500"
+                    }
+                ]
+            },
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "urn:murrelektronik.com:asset:1.0:0:700421-400021-6340500-01",
+                "defaultThumbnail": {
+                    "path": "/m12bild.PNG"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/nameplate/1212121212"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/identification/1212121212"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/technicaldata/1212121212"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/contactInformations/1212121212"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://www.murrelektronik.com/ids/instance/sm/documentation/1212121212"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "aasT_1050233_MACX_MCR_EX_TC_I_Ex",
+            "id": "https://i4d.de/T/1050233/aas",
+            "assetInformation": {
+                "assetKind": "Type",
+                "globalAssetId": "https://i4d.de/T/1050233",
+                "defaultThumbnail": {
+                    "path": "/aasx/images/102884_3000_int_04.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://i4d.de/T/1050233/submodel/Nameplate"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://i4d.de/T/1050233/submodel/HandoverDocumentation"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://i4d.de/T/1050233/submodel/TechnicalData"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://i4d.de/T/1050233/submodel/CarbonFootprint"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "AAS_Afag_ES30-300",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "https://aas.digitaltwin-vdma.org/aas/Afag_ES30-300",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://aas.digitaltwin-vdma.org/Afag_ES30-300",
+                "defaultThumbnail": {
+                    "path": "/Elektroschlitten_ES30_100.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://afag.com/ids/sm/2144_8002_4022_0644"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://afag.com/ids/sm/5500_9002_4022_9410"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://afag.com/ids/sm/8510_9002_4022_7861"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://afag.com/ids/sm/1540_9002_4022_7787"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://afag.com/ids/sm/7789cd41d8b842fecbdf4cc97d"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "AAS_P6447_HMI2022",
+            "id": "https://aas.digitaltwin-vdma.org/aas/Asentics_P6447_1812001",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://aas.digitaltwin-vdma.org/Asentics_P6447_1812001",
+                "defaultThumbnail": {
+                    "path": "/Thumbnail.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://asentics.de/asset/P6447_1812001/Nameplate"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://asentics.de/asset/P6447_1810001/ArticleInformation"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://asentics.de/asset/P6447_1810001/HandoverDocumentation"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://asentics.de/asset/P6447_1810001/TechnicalData"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://asentics.de/asset/P6447_1812001/ContactInfo"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://asentics.de/asset/P6447_19912001/BillOfMaterial"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://asentics.de/asset/9404_3272_4022_9046/ServiceNotifications"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "ExampleMotor",
+            "id": "http://customer.com/aas/9175_7013_7091_9168",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://customer.com/assets/KHBVZJSQKIY",
+                "defaultThumbnail": {
+                    "path": "/MotorI40.JPG"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://i40.customer.com/type/1/1/F13E8576F6488342"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http.//i40.customer.com/type/1/1/7A7104BDAB57E184"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://i40.customer.com/instance/1/1/AC69B1CB44F07935"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://i40.customer.com/type/1/1/1A7B62B529F19152"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "AAS_Type_ADN-20-60-A-P-A",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920220407125045000011260",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://smart.festo.com/asset/99920220407125045000027365",
+                "defaultThumbnail": {
+                    "path": "/aasx/TechnicalData/D15000100124271_1056x1024.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407125046000017157"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407125046000020106"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407125046000034840"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407125046000043505"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407125046000051361"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407125046000063354"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "AAS_Type_DFM-25-25-P-A-KF",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920220407124703000012783",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://smart.festo.com/asset/99920220407124703000020221",
+                "defaultThumbnail": {
+                    "path": "/aasx/TechnicalData/D15000100124647_1056x1024.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124704000014712"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124704000020384"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124704000036788"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124704000046554"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124705000016877"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124705000024066"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "AAS_Type_DFM-32-30-P-A-KF",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920220407124700000011121",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://smart.festo.com/asset/99920220407124700000024202",
+                "defaultThumbnail": {
+                    "path": "/aasx/TechnicalData/D15000100124647_1056x1024.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124700000035286"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124700000042407"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124701000011232"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124701000024014"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124701000038562"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220407124701000048841"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "AAS_Festo_EGSL-BS-45-100-3P",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920220331115310000013224",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://aas.digitaltwin-vdma.org/99920220331115310000027265",
+                "defaultThumbnail": {
+                    "path": "/aasx/TechnicalData/D15000100116352_1056x1024.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115310000031576"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115311000013503"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115311000020467"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115313000017515"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115313000027288"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/9404_3272_4022_9046/ServiceNotifications"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/19912001/BillOfMaterial"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "AAS_Type_EMME-AS-40-M-LV-AMB",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920220331115309000017543",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://smart.festo.com/asset/99920220331115309000026565",
+                "defaultThumbnail": {
+                    "path": "/aasx/TechnicalData/D15000100117269_1056x1024.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115310000012617"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115310000026321"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115310000030780"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115313000010825"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115313000020866"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220331115314000013424"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "AAS_Type_ESS-10-BS",
+            "administration": {
+                "version": "1",
+                "revision": "0"
+            },
+            "id": "http://smart.festo.com/aas/99920220425125307000016812",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "http://smart.festo.com/asset/99920220425125307000021422",
+                "defaultThumbnail": {
+                    "path": "/aasx/TechnicalData/D15000100114969_1056x1024.jpg"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220425125307000038208"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220425125307000040060"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220425125308000011470"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220425125308000026711"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220425125308000031474"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "http://smart.festo.com/id/instance/99920220425125308000041562"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        },
+        {
+            "idShort": "Hitachi_Gritter",
+            "id": "https://admin-shell.hitachi-industrial.eu/aas/1/1/000000001",
+            "assetInformation": {
+                "assetKind": "Instance",
+                "globalAssetId": "https://admin-shell.hitachi-industrial.eu/asset/000000001",
+                "defaultThumbnail": {
+                    "path": "/HX_200432.png"
+                }
+            },
+            "submodels": [
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/4343_5072_7091_3242"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6053_5072_7091_5102"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "www.company.com/ids/sm/6563_5072_7091_4267"
+                        }
+                    ]
+                },
+                {
+                    "type": "ModelReference",
+                    "keys": [
+                        {
+                            "type": "Submodel",
+                            "value": "https://automation.hitachi-industrial.eu/_Resources/Static/Packages/Moon.HitachiEurope/Downloads/automation/[2]%20Software/[5]%20Configuration%20Files/[1]%20Device%20Descriptions/Device%20files.zip"
+                        }
+                    ]
+                }
+            ],
+            "modelType": "AssetAdministrationShell"
+        }
+    ],
+    "paging_metadata": {}
+}

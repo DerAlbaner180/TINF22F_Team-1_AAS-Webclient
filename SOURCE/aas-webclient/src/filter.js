@@ -43,13 +43,6 @@ class Filter extends React.Component {
 
 
         }
-
-
-
-
-
-
-
     filterForName() {
         //Sucht nach einem AAS name
         let searchInput = document
