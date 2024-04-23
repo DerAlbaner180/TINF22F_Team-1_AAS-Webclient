@@ -4,11 +4,17 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownItem from "react-bootstrap/DropdownItem";
 import DropdownToggle from "react-bootstrap/DropdownToggle";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
+<<<<<<< HEAD
 import {getFullShellData} from "./backend";
 import {render} from "./assetBody";
 import {loadBody} from "./backend";
 import { openAsset } from './item';
 import './switchButton.css';
+=======
+import ReactDOM from 'react-dom';
+import Error from './errorMessage';
+
+>>>>>>> 327a23731eb44eb13866fdb878984acab66d1111
 
 class Filter extends React.Component {
     constructor(props) {
@@ -72,6 +78,12 @@ class Filter extends React.Component {
         if (newAssetArray.length === 0) {
             //Error Handling
             document.getElementById("error_message_NextToSearchField").style.visibility = "visible";
+            setTimeout(() => {
+                const errorMessage = document.getElementById("error_message_NextToSearchField");
+                if (errorMessage) {
+                    errorMessage.style.visibility = "hidden";
+                }
+            }, 4000); 
         } else {
             document.getElementById("error_message_NextToSearchField").style.visibility = "hidden";
             window.sessionStorage.setItem("content", JSON.stringify(newAssetArray));
@@ -116,6 +128,12 @@ class Filter extends React.Component {
                         if (newAsset.length === 0) {
                             //Error Handling
                             document.getElementById("error_message_NextToSearchField").style.visibility = "visible";
+                            setTimeout(() => {
+                                const errorMessage = document.getElementById("error_message_NextToSearchField");
+                                if (errorMessage) {
+                                    errorMessage.style.visibility = "hidden";
+                                }
+                            }, 4000); 
                         } else {
                             window.sessionStorage.setItem("content", JSON.stringify(newAsset));
                             index.render(<Main/>);
@@ -128,6 +146,12 @@ class Filter extends React.Component {
             if (shells.length === 0) {
                 //Error Handling
                 document.getElementById("error_message_NextToSearchField").style.visibility = "visible";
+                setTimeout(() => {
+                    const errorMessage = document.getElementById("error_message_NextToSearchField");
+                    if (errorMessage) {
+                        errorMessage.style.visibility = "hidden";
+                    }
+                }, 4000); 
             } else {
                 window.sessionStorage.setItem("content", JSON.stringify(shells));
                 index.render(<Main/>);
@@ -177,12 +201,19 @@ class Filter extends React.Component {
         if (newAssetArray.length === 0) {
             //Error Handling
             document.getElementById("error_message_filterForManufacturerName").style.visibility = "visible";
+            setTimeout(() => {
+                const errorMessage = document.getElementById("error_message_filterForManufacturerName");
+                if (errorMessage) {
+                    errorMessage.style.visibility = "hidden";
+                }
+            }, 4000); 
         } else {
             document.getElementById("error_message_filterForManufacturerName").style.visibility = "hidden";
             window.sessionStorage.setItem("content", JSON.stringify(newAssetArray));
             index.render(<Main/>);
         }
     }
+
 
     searchForManufacturerName() {
         let newAssetArray = [];
@@ -207,6 +238,9 @@ class Filter extends React.Component {
         if (newAssetArray.length === 0) {
             //Error Handling
             document.getElementById("error_message_filterForManufacturerName").style.visibility = "visible";
+            setTimeout(() => {
+                document.getElementById("error_message_filterForManufacturerName").style.visibility = "hidden";
+            }, 4000); 
         } else {
             document.getElementById("error_message_filterForManufacturerName").style.visibility = "hidden";
             window.sessionStorage.setItem("content", JSON.stringify(newAssetArray));
@@ -218,10 +252,11 @@ class Filter extends React.Component {
 
     deleteSearchInput() {
         let shells = JSON.parse(window.sessionStorage.getItem("shells"));
-        document.getElementById("searchField").value = "";
-        if (shells.length === 0) {
-            //Error Handling
-            alert("Cannot Clear!");
+        if (document.getElementById("searchField").value === "") {
+            const errorContainer = document.getElementById('error-container');
+            ReactDOM.unmountComponentAtNode(errorContainer);
+            ReactDOM.render(<Error message = "Input ist empty. You can not delete the entry"/>, errorContainer);
+            return;
         } else {
             window.sessionStorage.setItem("content", JSON.stringify(shells));
             index.render(<Main/>);
@@ -295,8 +330,10 @@ class Filter extends React.Component {
         console.log(sortedDates)
 
         if (sortedDates.length === 0) {
-            //Error Handling
-            alert("The assets cannot be sorted because they do not have a date");
+            const errorContainer = document.getElementById('error-container');
+            ReactDOM.unmountComponentAtNode(errorContainer);
+            ReactDOM.render(<Error message = "The assets cannot be sorted because they do not have a date"/>, errorContainer);
+            return;
         } else {
             window.sessionStorage.setItem("content", JSON.stringify(sortedDates));
             index.render(<Main/>);

@@ -1,10 +1,11 @@
 import {index, Main} from "./index";
+import ReactDOM from 'react-dom';
+import Error from './errorMessage';
 
 export let controller = new AbortController();
 console.log("Start");
 async function getData(url) {
     if (url.search("http") === -1) {
-        alert("Not a correct url");
         return undefined;
     }
 
@@ -91,6 +92,8 @@ function searchForKey(json, regex) {
     return returnList;
 }
 
+
+
 async function getFullShellData() {
     window.sessionStorage.setItem("loaded", false);
     let apiVersion;
@@ -101,6 +104,17 @@ async function getFullShellData() {
     }
 
     let shells = await getData(url + "shells").then( response => {
+        if(response == undefined || response == null){
+
+            console.error("Die Antwort ist undefiniert.");
+            window.sessionStorage.setItem("url", "");
+
+            const errorContainer = document.getElementById('error-container');
+            ReactDOM.unmountComponentAtNode(errorContainer);
+            ReactDOM.render(<Error message = "Server is not available"/>, errorContainer);
+
+            return[];
+        }
         if (response !== undefined) {
             //console.log(response)
             //console.log( typeof response);
@@ -161,10 +175,10 @@ async function getFullShellData() {
         }
     }).catch(err => {
         console.log(err)
-        window.alert("Server lädt nicht")
     });
 
     if (shells !== undefined) {
+        
         window.sessionStorage.setItem("shells", JSON.stringify(shells));
 
         console.log("Hier sind die Shells!!!!!!!!!"); //hier ist irgendwo der Fehler
@@ -186,6 +200,7 @@ async function getFullShellData() {
         window.sessionStorage.setItem("content", JSON.stringify(shells));
 
         console.log(shells);
+        window.sessionStorage.setItem("url", "");
     }
 }
 
