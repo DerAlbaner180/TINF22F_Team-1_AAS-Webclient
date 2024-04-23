@@ -1,3 +1,30 @@
+#err {
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute; 
+    opacity: 1;
+  }
+
+  #placeholder{
+
+    height: 75px;
+  }
+  
+.alert {
+    -webkit-animation: fadeout 3s linear forwards;
+    animation: fadeout 3s linear forwards;
+}
+
+@-webkit-keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
 
 .item {cursor: pointer;
 }
