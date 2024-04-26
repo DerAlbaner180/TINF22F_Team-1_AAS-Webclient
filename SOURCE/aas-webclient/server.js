@@ -12,6 +12,7 @@ app.use(cors());
 app.get("/shells", (req, res) => {
     console.log("Vorgang startet");
     res.send(shellsString);
+    console.log("gesendet");
 });
 app.listen(PORT, () => {
     console.log(`Server läuft auf Port ${PORT}`);
