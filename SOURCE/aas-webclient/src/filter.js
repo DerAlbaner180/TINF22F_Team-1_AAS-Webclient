@@ -4,17 +4,17 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownItem from "react-bootstrap/DropdownItem";
 import DropdownToggle from "react-bootstrap/DropdownToggle";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
-<<<<<<< HEAD
+
 import {getFullShellData} from "./backend";
 import {render} from "./assetBody";
 import {loadBody} from "./backend";
 import { openAsset } from './item';
 import './switchButton.css';
-=======
+
 import ReactDOM from 'react-dom';
 import Error from './errorMessage';
 
->>>>>>> 327a23731eb44eb13866fdb878984acab66d1111
+
 
 class Filter extends React.Component {
     constructor(props) {
