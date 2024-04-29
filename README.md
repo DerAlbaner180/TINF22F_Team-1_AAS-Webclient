@@ -3,7 +3,7 @@ The "AAS-Webclient" is a project of students of the Baden-Wuerttemberg Cooperati
 
 https://github.com/TTRSF/TINF22F-Team2-Nameplate-Generator
 
-Link to GitHub-Pages: https://deralbaner180.github.io/TINF22F_Team-1_AAS-Webclient/
+Link to GitHub-Pages: https://ilire0.github.io/TINF22F_Team-1_AAS-Webclient/
 
 ## Team Members
 - Armin Taktar          (Project Leader)
