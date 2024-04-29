@@ -98,10 +98,6 @@ async function getFullShellData() {
     window.sessionStorage.setItem("loaded", false);
     let apiVersion;
     let url = window.sessionStorage.getItem("url");
-    if (!url.endsWith("/")) {
-        url += "/";
-        window.sessionStorage.setItem("url", url);
-    }
 
     let shells = await getData(url + "shells").then( response => {
         if(response == undefined || response == null){
@@ -203,37 +199,39 @@ async function getFullShellData() {
         window.sessionStorage.setItem("url", "");
     }
 }
-
 async function loadBody(shell) {
     console.log("lade Body")
     let url = window.sessionStorage.getItem("url");
     url += "shells/" + (url.search("murr") === -1 ? btoa(shell.id) : encodeURIComponent(shell.id));
     url += (shell.apiVersion === 3 ? "/submodels" : "/aas/submodels");
 
-
-    if (url.search("murr") !== -1) {
-        let submodelData = [];
-        await getData(url).then(element => {
-            for (let i = 0; i < element.length; i++) {
-                submodelData.push(element[i].idShort);
-            }
-        });
-        shell.submodels = submodelData;
-    }
-
-    for (let i = 0; i < shell.submodels.length; i++) {
-        await loadSubmodel(shell.submodels[i], url, shell.apiVersion).then(response => {
-            if (response !== undefined) {
-                shell[response.idShort] = response;
-                let images = searchForKey(response, /[pP]roductImage\d*/);
-                if (images.length > 0) {
-                    shell["image"] = images[0];
-                    console.log(images[0]);
+    if (shell.submodels && Array.isArray(shell.submodels)) { // Überprüfung, ob shell.submodels definiert und ein Array ist
+        if (url.search("murr") !== -1) {
+            let submodelData = [];
+            await getData(url).then(element => {
+                for (let i = 0; i < element.length; i++) {
+                    submodelData.push(element[i].idShort);
                 }
-            }
-        });
+            });
+            shell.submodels = submodelData;
+        }
+
+        for (let i = 0; i < shell.submodels.length; i++) {
+            await loadSubmodel(shell.submodels[i], url, shell.apiVersion).then(response => {
+                if (response !== undefined) {
+                    shell[response.idShort] = response;
+                    let images = searchForKey(response, /[pP]roductImage\d*/);
+                    if (images.length > 0) {
+                        shell["image"] = images[0];
+                        console.log(images[0]);
+                    }
+                }
+            });
+        }
+        delete shell.submodels;
+    } else {
+        console.log("shell.submodels is not defined or not an array");
     }
-    delete shell.submodels;
     return shell;
 }
 
