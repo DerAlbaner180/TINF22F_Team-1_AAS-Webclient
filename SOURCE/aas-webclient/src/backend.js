@@ -151,7 +151,7 @@ async function getFullShellData() {
                 }
                 console.log("Submodels")
                 for(let i=0; i<submodelIds.length;i++){
-                    console.log(submodelIds[i])
+                    //console.log(submodelIds[i])
 
                 }
                 const mode=window.sessionStorage.getItem("mode");
