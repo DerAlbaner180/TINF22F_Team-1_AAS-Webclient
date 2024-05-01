@@ -1,15 +1,13 @@
 import {index, Main} from "./index";
-import ReactDOM from 'react-dom';
-import Error from './errorMessage';
 
 export let controller = new AbortController();
 console.log("Start");
+
 async function getData(url) {
 
     if (url.search("http") === -1) {
         return undefined;
     }
-
 
     controller = new AbortController();
     console.log("Get data of:"+url);
@@ -31,6 +29,7 @@ async function getData(url) {
             console.log(err);
         });
 }
+
 
 function getLangString(json) {
     if ("langStrings" in json) {

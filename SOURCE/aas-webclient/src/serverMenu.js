@@ -34,7 +34,6 @@ class ServerMenu extends React.Component {
         window.sessionStorage.setItem("url", url);
         document.getElementById("error_message_NextToSearchField").style.visibility = "hidden";
         document.getElementById("searchField").value = "";
-        let shells = JSON.parse(window.sessionStorage.getItem("content"));
         getFullShellData();
     
     }

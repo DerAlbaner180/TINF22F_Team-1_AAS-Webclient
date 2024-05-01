@@ -8,17 +8,26 @@ class ItemView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            loadedAndChanged: false // Initialisiere loadedAndChanged im Zustand
+            loadedAndChanged: true // Initialisiere loadedAndChanged im Zustand
         };
     }
 
     componentDidMount() {
-        // Überprüfen, ob sessionStorage 'loaded' nicht "true" ist, und nach 5 Sekunden den Zustand aktualisieren
+        this.isServerThere();
+    }
+
+     isServerThere() {
         setTimeout(() => {
             if (window.sessionStorage.getItem('loaded') !== "true") {
+                this.setState({ loadedAndChanged: false });
+            }
+
+            if(window.sessionStorage.getItem('loaded') === "true"){
                 this.setState({ loadedAndChanged: true });
             }
-        }, 5000);
+
+            this.isServerThere();
+        }, 10000);
     }
 
     render() {
@@ -40,9 +49,10 @@ class ItemView extends React.Component {
                 );
             } else {
                 // Wenn loadedAndChanged true ist, render NoServerPage mit der Meldung "Server not available"
-                if (this.state.loadedAndChanged) {
-                    return <NoServerPage message="Server not available" />;
+                if (!this.state.loadedAndChanged) {
+                    return <NoServerPage message="Server not available. Please load the Page again. If it still does not work, write us an email." />;
                 } else {
+                    if(this.state.loadedAndChanged){
                     return (
                         <div className="position-absolute top-50 start-50 translate-middle">
                             <div className="spinner-border" role="status">
@@ -50,6 +60,7 @@ class ItemView extends React.Component {
                             </div>
                         </div>
                     );
+                }
                 }
             }
         }
