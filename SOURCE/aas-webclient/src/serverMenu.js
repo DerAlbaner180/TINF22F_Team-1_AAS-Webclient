@@ -4,8 +4,10 @@ import {index, Main} from "./index";
 import Dropdown from 'react-bootstrap/Dropdown';
 import ReactDOM from 'react-dom';
 import Error from './errorMessage';
+import NoServerPage from './noServerPage';
 
 class ServerMenu extends React.Component {
+
     state = {
         serverlist: ["https://v3.admin-shell-io.com/", "https://admin-shell-io.com/5001/", "http://aas.murrelektronik.com:4001/aas", "https://ccae4836-001e-48c2-a4f9-235554f9400b.ma.bw-cloud-instance.org", "http://localhost:3333"],
     }
@@ -18,7 +20,7 @@ class ServerMenu extends React.Component {
     } changeServer() {
         controller.abort();
         let url = document.getElementById("server-url").value;
-        
+    
         if (!url.startsWith("http")) {
                 const errorContainer = document.getElementById('error-container');
                 ReactDOM.unmountComponentAtNode(errorContainer);
@@ -32,9 +34,10 @@ class ServerMenu extends React.Component {
         window.sessionStorage.setItem("url", url);
         document.getElementById("error_message_NextToSearchField").style.visibility = "hidden";
         document.getElementById("searchField").value = "";
+        let shells = JSON.parse(window.sessionStorage.getItem("content"));
         getFullShellData();
+    
     }
-
 
     render() {
         return (
