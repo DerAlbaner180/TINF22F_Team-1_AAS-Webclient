@@ -5,9 +5,11 @@ import Error from './errorMessage';
 export let controller = new AbortController();
 console.log("Start");
 async function getData(url) {
+
     if (url.search("http") === -1) {
         return undefined;
     }
+
 
     controller = new AbortController();
     console.log("Get data of:"+url);
@@ -16,14 +18,15 @@ async function getData(url) {
         signal: controller.signal,
         mode: "cors"
     })
-        .then(response => {
+        .then(async response => {
             console.log(response)
-            return response.json().then(jsonResponse => {
-                console.log(jsonResponse)
+            try {
+                const jsonResponse = await response.json();
+                console.log(jsonResponse);
                 return jsonResponse;
-            }).catch(err => {
+            } catch (err) {
                 console.log(err);
-            })
+            }
         }).catch(err => {
             console.log(err);
         });
@@ -100,17 +103,11 @@ async function getFullShellData() {
     let url = window.sessionStorage.getItem("url");
 
     let shells = await getData(url + "shells").then( response => {
-        if(response == undefined || response == null){
 
-            console.error("Die Antwort ist undefiniert.");
-            window.sessionStorage.setItem("url", "");
-
-            const errorContainer = document.getElementById('error-container');
-            ReactDOM.unmountComponentAtNode(errorContainer);
-            ReactDOM.render(<Error message = "Server is not available"/>, errorContainer);
-
-            return[];
+        if(response === undefined){
+            return undefined;
         }
+
         if (response !== undefined) {
             //console.log(response)
             //console.log( typeof response);
@@ -127,6 +124,8 @@ async function getFullShellData() {
                     }
                     console.log(apiVersion);
                 }
+                
+        
 
                 let id = apiVersion === 3 ? element.id : element.identification.id;
 
@@ -164,14 +163,15 @@ async function getFullShellData() {
                 }else {
                     return {
                         idShort: element.idShort,
-                        id: id,
+                        id: id
                     };
                 }
             });
         }
     }).catch(err => {
-        console.log(err)
-    });
+        console.error(err);
+    })
+
 
     if (shells !== undefined) {
         
@@ -205,6 +205,7 @@ async function loadBody(shell) {
     url += "shells/" + (url.search("murr") === -1 ? btoa(shell.id) : encodeURIComponent(shell.id));
     url += (shell.apiVersion === 3 ? "/submodels" : "/aas/submodels");
 
+
     if (shell.submodels && Array.isArray(shell.submodels)) { // Überprüfung, ob shell.submodels definiert und ein Array ist
         if (url.search("murr") !== -1) {
             let submodelData = [];
@@ -237,6 +238,7 @@ async function loadBody(shell) {
 
 async function loadSubmodel(id, url, api) {
     url += "/" + (url.search("murr") === -1 ? btoa(id) : id) + "/submodel"
+    
     return getData(url).then(element => {
         if (element !== undefined) {
             if (element.semanticId !== undefined) {

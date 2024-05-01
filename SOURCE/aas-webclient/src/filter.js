@@ -28,26 +28,21 @@ class Filter extends React.Component {
         getFullShellData();
 
     }
-
     toggleMode() {
         const newMode = this.state.mode === 1 ? 2 : 1;
         this.setState({ mode: newMode });
         sessionStorage.setItem('mode', newMode === 1 ? 'user' : 'expert');
-
-        getFullShellData();
-            if (window.sessionStorage.getItem("loaded")==true){
-                console.log("nach getData")
+    
+        getFullShellData().then(() => {
+    
+            if (window.sessionStorage.getItem("loaded") === "true") {
                 const shell = JSON.parse(window.sessionStorage.getItem("shellBody"));
                 const item = document.getElementById(shell.idShort);
-
-                console.log(item.className);
-                console.log(item.id);
                 item.click();
             }
-            console.log(window.sessionStorage.getItem("loaded"))
-
-
-
+        });
+    
+    
         }
     filterForName() {
         //Sucht nach einem AAS name
@@ -86,6 +81,7 @@ class Filter extends React.Component {
 
     autoComplete() {
         let shells = JSON.parse(window.sessionStorage.getItem("shells"));
+        
         let options = [];
         shells.forEach((element) => {
             if (element["idShort"]) {
