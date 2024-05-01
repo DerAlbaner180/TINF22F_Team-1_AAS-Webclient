@@ -1,5 +1,5 @@
 import React from "react";
-import {controller, getFullShellData} from "./backend";
+import {controller, getFullShellData, loadBody} from "./backend";
 import {index, Main} from "./index";
 import Dropdown from 'react-bootstrap/Dropdown';
 import ReactDOM from 'react-dom';
@@ -18,22 +18,6 @@ class ServerMenu extends React.Component {
     } changeServer() {
         controller.abort();
         let url = document.getElementById("server-url").value;
-
-        if (window.sessionStorage.getItem('loaded') !== "true") {
-        const timeoutPromise = new Promise((resolve) => {
-            
-            const errorContainer = document.getElementById('error-container');
-            ReactDOM.unmountComponentAtNode(errorContainer);
-
-                        setTimeout(() => {
-                            ReactDOM.render(<Error message="Server is not available"/>, errorContainer);
-                            resolve(); // Falls das Timeout ausgelöst wurde, löse die Promise auf
-                        }, 3000); // Timeout nach 5 Sekunden
-                    
-                });
-                return;
-            }
-
         
         if (!url.startsWith("http")) {
                 const errorContainer = document.getElementById('error-container');

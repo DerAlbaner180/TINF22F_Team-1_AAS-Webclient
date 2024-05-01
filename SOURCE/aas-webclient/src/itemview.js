@@ -1,5 +1,7 @@
 import React from 'react';
 import Item from "./item";
+import ReactDOM from 'react-dom';
+import Error from './errorMessage';
 
 class ItemView extends React.Component {
     render() {
@@ -7,6 +9,16 @@ class ItemView extends React.Component {
             return <div></div>;
         } else {
             let shells = JSON.parse(window.sessionStorage.getItem("content"));
+
+            if (!shells) {
+ 
+                        return (
+                        <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+                            <Error message="Server is not available" />
+                        </div>
+                        );
+                    
+                    }
           
             if (shells !== null && shells !== undefined) {
                 return (
