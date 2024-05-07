@@ -15,7 +15,6 @@ class ItemView extends React.Component {
     componentDidMount() {
         this.isServerThere();
     }
-
      isServerThere() {
         setTimeout(() => {
             if (window.sessionStorage.getItem('loaded') !== "true") {
