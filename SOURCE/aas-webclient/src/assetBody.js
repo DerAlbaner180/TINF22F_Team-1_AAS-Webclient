@@ -24,8 +24,13 @@ class AssetBody extends React.Component {
     }
 
     render() {
-        let shell = JSON.parse(window.sessionStorage.getItem("shellBody"));
+        let shellBody = JSON.parse(window.sessionStorage.getItem("shellBody"));
+        console.log(shellBody)
+
         if (window.sessionStorage.getItem("shellBody") !== null) {
+            const shell=shellBody.read;
+            console.log("AssetJSON")
+            console.log(shellBody.hide.assetJSON);
             return (
                 <div className="m-2 p-2 overflow-auto w-100">
                     <h3 className="">{shell.idShort}</h3> {/*Name des Assets*/}

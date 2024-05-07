@@ -151,18 +151,30 @@ async function getFullShellData() {
                 const mode=window.sessionStorage.getItem("mode");
                 if (mode=="expert"){
                     return {
-                        idShort: element.idShort,
-                        id: id,
-                        idEncoded: btoa(id),
-                        apiVersion: apiVersion,
-                        globalAssetId: element.assetInformation.globalAssetId,
-                        Assetsubmodels: submodelIds
+                        read:{
+                            idShort: element.idShort,
+                            id: id,
+                            idEncoded: btoa(id),
+                            apiVersion: apiVersion,
+                            globalAssetId: element.assetInformation.globalAssetId,
+                            Assetsubmodels: submodelIds
+                        },
+                        hide: {
+                            assetJSON:element
+                        }
+
+
                     };
 
                 }else {
                     return {
-                        idShort: element.idShort,
-                        id: id
+                        read:{
+                            idShort: element.idShort,
+                            id: id
+                        },
+                        hide: {
+                            assetJSON:element
+                        }
                     };
                 }
             });

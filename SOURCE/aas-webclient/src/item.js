@@ -14,15 +14,15 @@ class Item extends React.Component {
         console.log("wird geöffnet")
 
         document.getElementById("")
-        let parent = document.getElementById(this.props.shell.idShort).parentElement;
+        let parent = document.getElementById(this.props.shell.read.idShort).parentElement;
         console.log(this.props)
         let children = Array.from(parent.children);
         children.map(function (item){
         item.classList.remove("bg-primary-subtle");
         })
-        document.getElementById(this.props.shell.idShort).classList.add("bg-primary-subtle");
-        if (Object.keys(this.props.shell).includes("submodels")) {
-            loadBody(this.props.shell).then(response => {
+        document.getElementById(this.props.shell.read.idShort).classList.add("bg-primary-subtle");
+        if (Object.keys(this.props.shell.read).includes("submodels")) {
+            loadBody(this.props.shell.read).then(response => {
                 window.sessionStorage.setItem("shellBody", JSON.stringify(response));
                 index.render(<Main/>);
             });
@@ -34,7 +34,7 @@ class Item extends React.Component {
         
     }
     render() {
-        let name = this.props.shell.idShort;
+        let name = this.props.shell.read.idShort;
         let image = this.props.shell.image ? this.props.shell.image : "";
 
         return (
