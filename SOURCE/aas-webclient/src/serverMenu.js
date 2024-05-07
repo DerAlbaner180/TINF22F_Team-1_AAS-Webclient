@@ -9,7 +9,7 @@ import NoServerPage from './noServerPage';
 class ServerMenu extends React.Component {
 
     state = {
-        serverlist: ["https://v3.admin-shell-io.com/", "https://admin-shell-io.com/5001/", "http://aas.murrelektronik.com:4001/aas", "https://ccae4836-001e-48c2-a4f9-235554f9400b.ma.bw-cloud-instance.org", "http://localhost:3333"],
+        serverlist: ["https://v3.admin-shell-io.com/", "https://admin-shell-io.com/5001/", "http://aas.murrelektronik.com:4001/aas", "https://ccae4836-001e-48c2-a4f9-235554f9400b.ma.bw-cloud-instance.org", "http://localhost:3333/"],
     }
 
     componentDidMount() {
@@ -29,8 +29,9 @@ class ServerMenu extends React.Component {
         }
 
 
-        window.sessionStorage.clear();
+
         index.render(<Main/>);
+        console.log(url)
         window.sessionStorage.setItem("url", url);
         document.getElementById("error_message_NextToSearchField").style.visibility = "hidden";
         document.getElementById("searchField").value = "";

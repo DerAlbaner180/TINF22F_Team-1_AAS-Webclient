@@ -24,6 +24,7 @@ class Filter extends React.Component {
 
         };
         window.sessionStorage.setItem("mode", props.mode);
+        console.log(window.sessionStorage.getItem("mode"));
         this.toggleMode = this.toggleMode.bind(this);
         getFullShellData();
 
@@ -32,15 +33,10 @@ class Filter extends React.Component {
         const newMode = this.state.mode === 1 ? 2 : 1;
         this.setState({ mode: newMode });
         sessionStorage.setItem('mode', newMode === 1 ? 'user' : 'expert');
+
+        getFullShellData();
     
-        getFullShellData().then(() => {
-    
-            if (window.sessionStorage.getItem("loaded") === "true") {
-                const shell = JSON.parse(window.sessionStorage.getItem("shellBody"));
-                const item = document.getElementById(shell.idShort);
-                item.click();
-            }
-        });
+
     
     
         }

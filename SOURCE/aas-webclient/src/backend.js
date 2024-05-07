@@ -123,8 +123,8 @@ async function getFullShellData() {
                     }
                     console.log(apiVersion);
                 }
-                
-        
+
+
 
                 let id = apiVersion === 3 ? element.id : element.identification.id;
 
@@ -173,7 +173,7 @@ async function getFullShellData() {
 
 
     if (shells !== undefined) {
-        
+
         window.sessionStorage.setItem("shells", JSON.stringify(shells));
 
         console.log("Hier sind die Shells!!!!!!!!!"); //hier ist irgendwo der Fehler
@@ -195,7 +195,7 @@ async function getFullShellData() {
         window.sessionStorage.setItem("content", JSON.stringify(shells));
 
         console.log(shells);
-        window.sessionStorage.setItem("url", "");
+        //window.sessionStorage.setItem("url", "");
     }
 }
 async function loadBody(shell) {
@@ -237,7 +237,7 @@ async function loadBody(shell) {
 
 async function loadSubmodel(id, url, api) {
     url += "/" + (url.search("murr") === -1 ? btoa(id) : id) + "/submodel"
-    
+
     return getData(url).then(element => {
         if (element !== undefined) {
             if (element.semanticId !== undefined) {
