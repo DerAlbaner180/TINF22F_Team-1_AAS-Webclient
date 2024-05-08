@@ -113,12 +113,6 @@ async function getFullShellData() {
             return undefined;
         }
 
-        const entries = Object.entries(response);
-        const hasMatchingIdShort = entries[0][1].some(element => element.idShort === url); // Überprüfen, ob eine idShort der URL entspricht
-        if (!hasMatchingIdShort) {
-            url = ""; // Wenn keine Übereinstimmung gefunden wird, setze url auf einen leeren String
-        }
-
         url += url ? "/" : ""; 
         if (response !== undefined) {
             //console.log(response)

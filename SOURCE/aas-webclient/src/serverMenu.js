@@ -34,7 +34,7 @@ class ServerMenu extends React.Component {
         let isValidURL = false;
         if (shells) {
             for (let i = 0; i < shells.length; i++) {
-                if (url === shells.id[i]) {
+                if (url == shells[i].id) {
                     isValidURL = true;
                     break;
                 }
