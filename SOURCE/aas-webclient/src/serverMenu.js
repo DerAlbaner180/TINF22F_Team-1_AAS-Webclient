@@ -1,10 +1,9 @@
 import React from "react";
-import {controller, getFullShellData, loadBody} from "./backend";
+import {controller, getFullShellData, loadBody, getShells} from "./backend";
 import {index, Main} from "./index";
 import Dropdown from 'react-bootstrap/Dropdown';
 import ReactDOM from 'react-dom';
 import Error from './errorMessage';
-import NoServerPage from './noServerPage';
 
 class ServerMenu extends React.Component {
 
@@ -22,21 +21,45 @@ class ServerMenu extends React.Component {
         let url = document.getElementById("server-url").value;
     
         if (!url.startsWith("http")) {
-                const errorContainer = document.getElementById('error-container');
-                ReactDOM.unmountComponentAtNode(errorContainer);
-                ReactDOM.render(<Error message = "URL has to start with http!"/>, errorContainer);
-                return;
+            const errorContainer = document.getElementById('error-container');
+            ReactDOM.unmountComponentAtNode(errorContainer);
+            window.sessionStorage.setItem("url", "");
+            ReactDOM.render(<Error message="URL has to start with http!" />, errorContainer);
+            return;
         }
-
-
-        window.sessionStorage.clear();
-        index.render(<Main/>);
-        window.sessionStorage.setItem("url", url);
-        document.getElementById("error_message_NextToSearchField").style.visibility = "hidden";
-        document.getElementById("searchField").value = "";
-        getFullShellData();
     
+        const shells = getShells();
+        const serverlist=  ["https://v3.admin-shell-io.com/", "https://admin-shell-io.com/5001/", "http://aas.murrelektronik.com:4001/aas", "https://ccae4836-001e-48c2-a4f9-235554f9400b.ma.bw-cloud-instance.org", "http://localhost:3333"];
+
+        let isValidURL = false;
+        if (shells) {
+            for (let i = 0; i < shells.length; i++) {
+                if (url === shells.id[i]) {
+                    isValidURL = true;
+                    break;
+                }
+            }
+        }
+        
+        if (!isValidURL && serverlist.includes(url)) {
+            isValidURL = true;
+        }
+        
+        if (isValidURL) {
+            window.sessionStorage.clear();
+            index.render(<Main />);
+            window.sessionStorage.setItem("url", url);
+            document.getElementById("error_message_NextToSearchField").style.visibility = "hidden";
+            document.getElementById("searchField").value = "";
+            getFullShellData();
+        } else {
+            const errorContainer = document.getElementById('error-container');
+            ReactDOM.unmountComponentAtNode(errorContainer);
+            window.sessionStorage.setItem("url", "");
+            ReactDOM.render(<Error message="Invalid server URL!" />, errorContainer);
+        }
     }
+    
 
     render() {
         return (
