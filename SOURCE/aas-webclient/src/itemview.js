@@ -49,7 +49,8 @@ class ItemView extends React.Component {
             } else {
                 // Wenn loadedAndChanged true ist, render NoServerPage mit der Meldung "Server not available"
                 if (!this.state.loadedAndChanged) {
-                    return <NoServerPage message="Server not available. Please load the Page again. If it still does not work, write us an email." />;
+                    window.sessionStorage.setItem("url", "");
+                    return <NoServerPage message="Server not available. Please load the Page again. If it still does not work, check the Documentation in GitHub" />;
                 } else {
                     if(this.state.loadedAndChanged){
                     return (

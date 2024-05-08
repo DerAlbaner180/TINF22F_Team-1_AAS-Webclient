@@ -1,4 +1,6 @@
 import {index, Main} from "./index";
+import ReactDOM from 'react-dom';
+import Error from './errorMessage';
 
 export let controller = new AbortController();
 console.log("Start");
@@ -94,19 +96,24 @@ function searchForKey(json, regex) {
     return returnList;
 }
 
+let shells;
 
+function getShells() {
+    return shells;
+}
 
 async function getFullShellData() {
     window.sessionStorage.setItem("loaded", false);
     let apiVersion;
     let url = window.sessionStorage.getItem("url");
 
-    let shells = await getData(url + "shells").then( response => {
+    shells = await getData(url + "shells").then( response => {
 
         if(response === undefined){
             return undefined;
         }
 
+        url += url ? "/" : ""; 
         if (response !== undefined) {
             //console.log(response)
             //console.log( typeof response);
@@ -123,7 +130,6 @@ async function getFullShellData() {
                     }
                     console.log(apiVersion);
                 }
-
 
 
                 let id = apiVersion === 3 ? element.id : element.identification.id;
@@ -265,4 +271,6 @@ async function loadSubmodel(id, url, api) {
     });
 }
 
-export {getFullShellData, loadBody}
+
+export {getFullShellData, loadBody, getShells}
+
