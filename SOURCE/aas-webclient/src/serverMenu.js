@@ -1,11 +1,13 @@
 import React from "react";
-import {controller, getFullShellData, loadBody, getShells} from "./backend";
+import {controller, getFullShellData, loadBody, getShells,checkURL  } from "./backend";
 import {index, Main} from "./index";
 import Dropdown from 'react-bootstrap/Dropdown';
 import ReactDOM from 'react-dom';
 import Error from './errorMessage';
 
 class ServerMenu extends React.Component {
+
+    
 
     state = {
         serverlist: ["https://v3.admin-shell-io.com/", "https://admin-shell-io.com/5001/", "http://aas.murrelektronik.com:4001/aas", "https://ccae4836-001e-48c2-a4f9-235554f9400b.ma.bw-cloud-instance.org", "http://localhost:3333/"],
@@ -32,6 +34,7 @@ class ServerMenu extends React.Component {
 
 
         index.render(<Main/>);
+        console.log("hier url")
         console.log(url)
         window.sessionStorage.setItem("url", url);
         document.getElementById("error_message_NextToSearchField").style.visibility = "hidden";
@@ -52,9 +55,8 @@ class ServerMenu extends React.Component {
             }
         }
         
-        if (!isValidURL && serverlist.includes(url)) {
-            isValidURL = true;
-        }
+       isValidURL=checkURL(url)
+       console.log(isValidURL)
         
         if (isValidURL) {
             window.sessionStorage.clear();
@@ -69,7 +71,10 @@ class ServerMenu extends React.Component {
             window.sessionStorage.setItem("url", "");
             ReactDOM.render(<Error message="Invalid server URL!" />, errorContainer);
         }
+        console.log('hier nochmal url')
+        console.log(window.sessionStorage.getItem('url'))
     }
+
     
 
     render() {

@@ -5,6 +5,27 @@ import Error from './errorMessage';
 export let controller = new AbortController();
 console.log("Start");
 
+//Überprüft ob server URL gültig ist oder nicht
+async function checkURL(url){
+    if (url.toLowerCase().endsWith("/")){
+        url= url+"shells"
+    }else if(url.toLowerCase().endsWith('/shells')){
+        // hier muss nichts passieren
+    }else{
+        url=url+"/shells"
+    }
+
+    let fetchTry= await fetch(url)
+
+    if(fetchTry.ok){
+        return true
+    }else{
+        return false
+    }
+
+    
+}
+
 async function getData(url) {
 
     if (url.search("http") === -1) {
@@ -99,7 +120,8 @@ function searchForKey(json, regex) {
 let shells;
 
 function getShells() {
-    return shells;
+
+    return true ;
 }
 
 async function getFullShellData() {
@@ -272,5 +294,5 @@ async function loadSubmodel(id, url, api) {
 }
 
 
-export {getFullShellData, loadBody, getShells}
+export {getFullShellData, loadBody, getShells, checkURL}
 

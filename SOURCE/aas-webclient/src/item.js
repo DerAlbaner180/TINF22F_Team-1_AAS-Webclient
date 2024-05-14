@@ -23,6 +23,7 @@ class Item extends React.Component {
         document.getElementById(this.props.shell.read.idShort).classList.add("bg-primary-subtle");
         if (Object.keys(this.props.shell.read).includes("submodels")) {
             loadBody(this.props.shell.read).then(response => {
+                
                 window.sessionStorage.setItem("shellBody", JSON.stringify(response));
                 index.render(<Main/>);
             });
