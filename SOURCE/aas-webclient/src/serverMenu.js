@@ -73,6 +73,8 @@ class ServerMenu extends React.Component {
         }
         console.log('hier nochmal url')
         console.log(window.sessionStorage.getItem('url'))
+
+       
     }
 
     

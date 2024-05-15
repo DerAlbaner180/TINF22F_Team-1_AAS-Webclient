@@ -44,6 +44,8 @@ async function getData(url) {
             try {
                 const jsonResponse = await response.json();
                 console.log(jsonResponse);
+
+                window.sessionStorage.setItem("Shells_Komplett",jsonResponse)
                 return jsonResponse;
             } catch (err) {
                 console.log(err);
