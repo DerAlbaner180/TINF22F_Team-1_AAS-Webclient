@@ -115,10 +115,12 @@ const AssetBody = () => {
     async function getSubmodel() {
 
         let url = window.sessionStorage.getItem('url')
+        let urlSub
         if (url.toLowerCase().endsWith("/")){
+            urlSub=url
             url= url+"shells"
         }else if(url.toLowerCase().endsWith('/shells')){
-            // hier muss nichts passieren
+            urlSub=url.slice(0, -7)
         }else{
             url=url+"/shells"
         }
@@ -127,22 +129,45 @@ const AssetBody = () => {
         let shellsJson= await shells.json()
         let shellsArray= shellsJson.result
         
-        console.log("TEst ARray submodel")
-        console.log(shellsArray[0].submodels)
-        console.log("genaues model")
-        console.log(shellsArray[0].submodels[0].keys[0].value)
+        //console.log("TEst ARray submodel")
+        //console.log(shellsArray[0].submodels)
+        //console.log("genaues model")
+        //console.log(shellsArray[0].submodels[0].keys[0].value)
 
         for (let i = 0; i < shellsArray.length; i++) {
-            let submodelsVonObjekt = shellsArray[i].submodels
+            let submodelsVonObjekt = shellsArray[i].submodels;
+        
+            for (let n = 0; n < submodelsVonObjekt.length; n++) {
+                let submodelKeys = submodelsVonObjekt[n].keys;
+        
+                for (let key of submodelKeys) {
 
-            console.log(submodelsVonObjekt)
+                    
+                    //console.log("einzelne keys");
+                    //console.log(key.value);
 
-            for (let n=0; n<submodelsVonObjekt.length;n++){
-                let submodelKeys= submodelsVonObjekt[n].keys
-                console.log("keys")
-                console.log(submodelKeys)
+                    let key64= btoa(key.value)
+                    let submodelResponseUrl= urlSub+"/submodels/"+key64
 
+                    //console.log(submodelResponseUrl)
+
+                    let submodelBom= await fetch(submodelResponseUrl)
+                    let submodelBomJson= await submodelBom.json()
+                    
+                    
+                    if(submodelBomJson.idShort==="BillOfMaterial"|| submodelBomJson.idShort==="BoM"||submodelBomJson.idShort==="BillofMaterial"){
+                        console.log(submodelBomJson)
+
+                        let nameSubmodel= submodelBomJson.idShort
+
+                        let elements = submodelBomJson.submodelElements
+
+                        console.log("SubmodelElements")
+
+                        console.log(elements)
+                    }
                 
+                }
             }
         }
 /*
@@ -201,7 +226,7 @@ const AssetBody = () => {
         */
     }
 
-
+    
 
     let shellBody = JSON.parse(window.sessionStorage.getItem("shellBody"));
 
