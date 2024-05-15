@@ -8,7 +8,8 @@ const AssetBody = () => {
 
     useEffect(() => {
         // Hier wird die Funktion getSubmodel() aufgerufen, sobald das Element im DOM vorhanden ist
-        getSubmodel();
+        getSubmodel()
+        
     }, []);
 
     const changeContent = (event) => {
@@ -37,6 +38,8 @@ const AssetBody = () => {
                     {json ? (
                         Object.entries(json).map(([key, value]) => {
                             if (typeof value === "object") {
+
+                                
                                 if (Object.keys(json[key]).length > 0) {
                                     return (
                                         <tr>
@@ -89,142 +92,81 @@ const AssetBody = () => {
             </table>
         );
     };
-    //Verarbeitet BoM
-    function createDivsForInformation(json) {
-        const container = document.createElement("div");
-
-        // Erstelle ein Div für jede Information im JSON
-        for (const entry of json.submodelElements) {
-            const div = document.createElement("div");
-            div.classList.add("entry");
-
-            const idShort = document.createElement("p");
-            idShort.textContent = `ID Short: ${entry.idShort}`;
-            div.appendChild(idShort);
-
-            const globalAssetId = document.createElement("p");
-            globalAssetId.textContent = `Global Asset ID: ${entry.globalAssetId}`;
-            div.appendChild(globalAssetId);
-
-            container.appendChild(div);
-        }
-
-        return container;
-    }
+    
 
     async function getSubmodel() {
 
-        let url = window.sessionStorage.getItem('url')
-        let urlSub
-        if (url.toLowerCase().endsWith("/")){
-            urlSub=url
-            url= url+"shells"
-        }else if(url.toLowerCase().endsWith('/shells')){
-            urlSub=url.slice(0, -7)
-        }else{
-            url=url+"/shells"
+        let assetID= document.getElementById("aasID").innerHTML
+        console.log("Hier value:")
+
+        console.log(assetID)
+        let url = window.sessionStorage.getItem('url');
+        let urlSub;
+        if (url.toLowerCase().endsWith("/")) {
+            urlSub = url;
+            url = url + "shells";
+        } else if (url.toLowerCase().endsWith('/shells')) {
+            urlSub = url.slice(0, -7);
+        } else {
+            url = url + "/shells";
         }
-
-        let shells = await fetch(url)
-        let shellsJson= await shells.json()
-        let shellsArray= shellsJson.result
-        
-        //console.log("TEst ARray submodel")
-        //console.log(shellsArray[0].submodels)
-        //console.log("genaues model")
-        //console.log(shellsArray[0].submodels[0].keys[0].value)
-
-        for (let i = 0; i < shellsArray.length; i++) {
-            let submodelsVonObjekt = shellsArray[i].submodels;
-        
-            for (let n = 0; n < submodelsVonObjekt.length; n++) {
-                let submodelKeys = submodelsVonObjekt[n].keys;
-        
-                for (let key of submodelKeys) {
-
-                    
-                    //console.log("einzelne keys");
-                    //console.log(key.value);
-
-                    let key64= btoa(key.value)
-                    let submodelResponseUrl= urlSub+"/submodels/"+key64
-
-                    //console.log(submodelResponseUrl)
-
-                    let submodelBom= await fetch(submodelResponseUrl)
-                    let submodelBomJson= await submodelBom.json()
-                    
-                    
-                    if(submodelBomJson.idShort==="BillOfMaterial"|| submodelBomJson.idShort==="BoM"||submodelBomJson.idShort==="BillofMaterial"){
-                        console.log(submodelBomJson)
-
-                        let nameSubmodel= submodelBomJson.idShort
-
-                        let elements = submodelBomJson.submodelElements
-
-                        console.log("SubmodelElements")
-
-                        console.log(elements)
-                    }
-                
-                }
-            }
-        }
-/*
-        for (let shell of shellsArray){
-
-            let submodelsVonObjekt = shell.submodels
-            console.log(submodelsVonObjekt)
-
-            let submodelArray= submodelsVonObjekt.keys
-
-            console.log(submodelArray)
-        }
-        */
+    
+        let shells = await fetch(url);
+        let shellsJson = await shells.json();
+        let shellsArray = shellsJson.result;
 
         /*
 
-        if (submodels) {
+        for (let asset in shellsArray){
+            if(asset.id===assetID){
+
+                
+                let submodelsVonObjekt = asset.submodels;
             
-
-            submodels.result.forEach(async (item) => {
-                const { idShort, id, submodels } = item;
-                console.log('idShort:', idShort);
-                console.log('id:', id);
-
-                if (submodels) {
-                    submodels.forEach(async (submodel) => {
-                        let submodelIDValue = submodel.keys[0].value;
-                        let submodelBase64 = btoa(submodelIDValue);
-
-                        let serverUrl = window.sessionStorage.getItem('url');
-                        if (!serverUrl.endsWith('/')) {
-                            serverUrl = serverUrl + '/';
+                    for (let n = 0; n < submodelsVonObjekt.length; n++) {
+                        let submodelKeys = submodelsVonObjekt[n].keys;
+            
+                        for (let key of submodelKeys) {
+                            let key64 = btoa(key.value);
+                            let submodelResponseUrl = urlSub + "/submodels/" + key64;
+            
+                            let submodelBom = await fetch(submodelResponseUrl);
+                            let submodelBomJson = await submodelBom.json();
+            
+                            // Erstellen eines <div> Elements für das Submodel-Key
+                            let div = document.createElement("div");
+                            div.textContent = key.value; // Hier könnte auch key.idShort verwendet werden, je nach Bedarf
+                            document.querySelector('.submodels').appendChild(div);
+            
+                            if (submodelBomJson.idShort === "BillOfMaterial" || submodelBomJson.idShort === "BoM" || submodelBomJson.idShort === "BillofMaterial") {
+                                let elements = submodelBomJson.submodelElements;
+            
+                                // Erstellen eines <div> Elements für die Submodelelemente
+                                let submodelElementsDiv = document.createElement("div");
+            
+                                // Durchlaufen der Submodelelemente und sie als <p> Elemente hinzufügen
+                                elements.forEach(element => {
+                                    let p = document.createElement("p");
+                                    p.textContent = element.idShort;
+                                    submodelElementsDiv.appendChild(p);
+                                });
+            
+                                // Hinzufügen des Submodelelemente <div> zum entsprechenden Submodel-Key <div>
+                                div.appendChild(submodelElementsDiv);
+                            }
                         }
+                    }
+                
 
-                        let submodelFetch = await fetch(serverUrl + 'submodels/' + submodelBase64);
-                        console.log('Hier der fetch');
-                        console.log(submodelFetch);
-
-                        let submodelValues = await submodelFetch.json();
-                        console.log('Hier sind die Values:');
-                        console.log(submodelValues);
-                    });
-                }
-            });
-        } else {
-            console.error("submodels not found in sessionStorage.");
+            }
         }
-
-        // Erstelle die Divs für die erhaltenen Informationen
-        let divs = createDivsForInformation(submodelValues);
-
-        // Wähle das Container-Element mit der Klasse "submodels" aus und füge die erstellten Divs hinzu
-        const submodelsContainer = document.querySelector('.submodels');
-        submodelsContainer.innerHTML = ''; // Leere den Container, falls bereits Elemente vorhanden sind
-        submodelsContainer.appendChild(divs);
         */
+    
+        
     }
+    
+    
+    
 
     
 
@@ -232,6 +174,7 @@ const AssetBody = () => {
 
     if (window.sessionStorage.getItem("shellBody") !== null) {
         const shell = shellBody.read;
+
 
         return (
             <div className="m-2 p-2 overflow-auto w-100">
@@ -256,8 +199,8 @@ const AssetBody = () => {
                                                 return (
                                                     <tr>
                                                         <td>
-                                                            <p className="key">{key}</p>
-                                                            <p className="value">{value === '' ? '-' : value}</p>
+                                                            <p className="key" >{key}</p>
+                                                            <p className="value" id="aasID">{value === '' ? '-' : value}</p>
                                                             <hr></hr>
                                                         </td>
                                                     </tr>
