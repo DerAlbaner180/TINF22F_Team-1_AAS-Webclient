@@ -8,13 +8,14 @@ const AssetBody = () => {
 
     useEffect(() => {
         // Hier wird die Funktion getSubmodel() aufgerufen, sobald das Element im DOM vorhanden ist
-        getSubmodel()
+        
         
     }, []);
 
     const changeContent = (event) => {
         clearView();
         document.getElementById(event.target.innerHTML).hidden = false;
+        getSubmodel()
         event.target.classList.add("bg-primary-subtle");
     };
 
@@ -78,9 +79,8 @@ const AssetBody = () => {
                                     return (
                                         <tr>
                                             <td>
-                                                <p className="key">{key}</p>
-                                                <p className="value">Submodel ID: <div className="submodelIDValue">{value === '' ? '-' : value}</div></p>
-                                                <div className="submodels"></div>
+                                                 
+                                                <div className="submodels" id="submodels"></div>
                                                 <hr></hr>
                                             </td>
                                         </tr>
@@ -110,10 +110,55 @@ const AssetBody = () => {
         } else {
             url = url + "/shells";
         }
+
+        let asset64= btoa(assetID)
     
-        let shells = await fetch(url);
-        let shellsJson = await shells.json();
-        let shellsArray = shellsJson.result;
+        let bestimmtesAsset= await fetch(url+"/"+asset64)
+
+        let bestimmtesAssetJson= await bestimmtesAsset.json()
+        console.log("ASET")
+        console.log(bestimmtesAssetJson)
+
+        console.log(bestimmtesAssetJson.submodels)
+        //let shells = await fetch(url);
+        //let shellsJson = await shells.json();
+        //let shellsArray = shellsJson.result;
+
+        let submodelsVonObjekt= bestimmtesAssetJson.submodels
+
+        for (let n = 0; n < submodelsVonObjekt.length; n++) {
+            let submodelKeys = submodelsVonObjekt[n].keys;
+
+            for (let key of submodelKeys) {
+                let key64 = btoa(key.value);
+                let submodelResponseUrl = urlSub + "/submodels/" + key64;
+
+                let submodelBom = await fetch(submodelResponseUrl);
+                let submodelBomJson = await submodelBom.json();
+
+                // Erstellen eines <div> Elements für das Submodel-Key
+                let div = document.createElement("div");
+                div.textContent = key.value; // Hier könnte auch key.idShort verwendet werden, je nach Bedarf
+                document.getElementById("submodels").appendChild(div);
+
+                if (submodelBomJson.idShort === "BillOfMaterial" || submodelBomJson.idShort === "BoM" || submodelBomJson.idShort === "BillofMaterial") {
+                    let elements = submodelBomJson.submodelElements;
+
+                    // Erstellen eines <div> Elements für die Submodelelemente
+                    let submodelElementsDiv = document.createElement("div");
+
+                    // Durchlaufen der Submodelelemente und sie als <p> Elemente hinzufügen
+                    elements.forEach(element => {
+                        let p = document.createElement("p");
+                        p.textContent = element.idShort;
+                        submodelElementsDiv.appendChild(p);
+                    });
+
+                    // Hinzufügen des Submodelelemente <div> zum entsprechenden Submodel-Key <div>
+                    div.appendChild(submodelElementsDiv);
+                }
+            }
+        }
 
         /*
 
@@ -214,7 +259,7 @@ const AssetBody = () => {
                     </div>
                     <hr></hr>
                     <div className={"d-flex flex-row"}>
-                        <div className={"d-flex flex-column navigation-buttons"}>
+                        <div className={"d-flex flex-column navigation-buttons"} >
                             {Object.entries(shell).map(([key, value]) => {
                                 if (typeof value === "object" && shell[key] !== null) {
                                     return (
