@@ -68,7 +68,7 @@ class ServerMenu extends React.Component {
         } else {
             const errorContainer = document.getElementById('error-container');
             ReactDOM.unmountComponentAtNode(errorContainer);
-            window.sessionStorage.setItem("url", "");
+            //window.sessionStorage.setItem("url", "");
             ReactDOM.render(<Error message="Invalid server URL!" />, errorContainer);
         }
         console.log('hier nochmal url')

@@ -28,6 +28,26 @@ const AssetBody = () => {
             button.classList.remove("bg-primary-subtle");
         }
     };
+    function jsonDownload(){
+        const jsonData = shellBody.hide.assetJSON;
+
+        // JSON in einen Blob umwandeln
+        const jsonBlob = new Blob([JSON.stringify(jsonData, null, 2)], {type: 'application/json'});
+
+        // Blob als URL erstellen
+        const url = window.URL.createObjectURL(jsonBlob);
+
+        // Link erstellen und klicken, um den Download zu starten
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'data.json'; // Dateiname für den Download
+        document.body.appendChild(link);
+        link.click();
+
+        // Link wieder entfernen
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+    }
 
     const buildBody = (json, id = "") => {
         let hidden = id !== "";
@@ -235,6 +255,7 @@ const AssetBody = () => {
         const shell = shellBody.read;
 
 
+
         return (
             <div className="m-2 p-2 overflow-auto w-100">
                 <h3 className="">{shell.idShort}</h3>
@@ -292,7 +313,11 @@ const AssetBody = () => {
                                 }
                             })}
                         </div>
+
                     </div>
+                        <div className="d-flex flex-column navigation-buttons">
+                            <div onClick={jsonDownload} className="navigation-button my-2 shadow-sm border rounded">JSON downloaden</div>
+                        </div>
                 </div>
             </div>
         );
