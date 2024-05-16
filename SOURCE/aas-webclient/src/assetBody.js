@@ -15,7 +15,6 @@ const AssetBody = () => {
     const changeContent = (event) => {
         clearView();
         document.getElementById(event.target.innerHTML).hidden = false;
-        getSubmodel()
         event.target.classList.add("bg-primary-subtle");
     };
 
@@ -76,11 +75,14 @@ const AssetBody = () => {
                                 }
                             } else {
                                 if (key !== "idShort") {
+                                   
                                     return (
                                         <tr>
                                             <td>
-                                                 
-                                                <div className="submodels" id="submodels"></div>
+                                                 <div>{key}</div>
+                                                 <p id={value} > {value === '' ? '-' : value}</p>
+                                                 <p id={`idShort-${value}`}></p>
+                                                <div id={`submodelElements-${value}`} onLoad={getSubmodel(value)}></div>
                                                 <hr></hr>
                                             </td>
                                         </tr>
@@ -94,12 +96,13 @@ const AssetBody = () => {
     };
     
 
-    async function getSubmodel() {
+    async function getSubmodel(modelID) {
+        //Kommt an und ist submodel URL
+        let assetID= modelID
 
-        let assetID= document.getElementById("aasID").innerHTML
-        console.log("Hier value:")
+        console.log("SUBMODEL:"+assetID)
 
-        console.log(assetID)
+        //Das kommt weil ich die Server URL brauche aber ohne "/shells" damit ich die submodels abrufen kann
         let url = window.sessionStorage.getItem('url');
         let urlSub;
         if (url.toLowerCase().endsWith("/")) {
@@ -111,21 +114,46 @@ const AssetBody = () => {
             url = url + "/shells";
         }
 
+        //Die Submodel URL muss base64 encoded werden damit die JSON abgerufen werden kann
         let asset64= btoa(assetID)
-    
-        let bestimmtesAsset= await fetch(url+"/"+asset64)
+        
+        //hier wird das Submodel JSON abgerufen
+        let bestimmtesAsset= await fetch(urlSub+"/submodels/"+asset64)
 
+        //Hier wird die Response umgewandelt
         let bestimmtesAssetJson= await bestimmtesAsset.json()
-        console.log("ASET")
+
+        //Test
+        console.log("ASSET")
         console.log(bestimmtesAssetJson)
 
-        console.log(bestimmtesAssetJson.submodels)
-        //let shells = await fetch(url);
-        //let shellsJson = await shells.json();
-        //let shellsArray = shellsJson.result;
+        console.log(bestimmtesAssetJson.idShort)
 
-        let submodelsVonObjekt= bestimmtesAssetJson.submodels
+        document.getElementById("idShort-"+assetID).innerHTML = bestimmtesAssetJson.idShort;
 
+        console.log(bestimmtesAssetJson.idShort)
+
+        if (bestimmtesAssetJson.idShort === "BillOfMaterial" || bestimmtesAssetJson.idShort === "BoM" || bestimmtesAssetJson.idShort === "BillofMaterial"){
+        //hier aus dem Submodel das submodel Array Elements gezogen
+        let submodelElementsList= bestimmtesAssetJson.submodelElements
+
+        console.log("Submodel Elements")
+        console.log(submodelElementsList)
+        for(let i= 0; i<submodelElementsList.length; i++){
+            let pElement= document.createElement('p')
+
+            pElement.innerHTML=submodelElementsList[i].idShort
+
+            document.getElementById("submodelElements-"+assetID).appendChild(pElement)
+        }
+
+        
+        
+
+        }
+
+        
+/*
         for (let n = 0; n < submodelsVonObjekt.length; n++) {
             let submodelKeys = submodelsVonObjekt[n].keys;
 
@@ -136,26 +164,12 @@ const AssetBody = () => {
                 let submodelBom = await fetch(submodelResponseUrl);
                 let submodelBomJson = await submodelBom.json();
 
-                // Erstellen eines <div> Elements für das Submodel-Key
-                let div = document.createElement("div");
-                div.textContent = key.value; // Hier könnte auch key.idShort verwendet werden, je nach Bedarf
-                document.getElementById("submodels").appendChild(div);
-
+                
                 if (submodelBomJson.idShort === "BillOfMaterial" || submodelBomJson.idShort === "BoM" || submodelBomJson.idShort === "BillofMaterial") {
                     let elements = submodelBomJson.submodelElements;
 
-                    // Erstellen eines <div> Elements für die Submodelelemente
-                    let submodelElementsDiv = document.createElement("div");
-
-                    // Durchlaufen der Submodelelemente und sie als <p> Elemente hinzufügen
-                    elements.forEach(element => {
-                        let p = document.createElement("p");
-                        p.textContent = element.idShort;
-                        submodelElementsDiv.appendChild(p);
-                    });
-
-                    // Hinzufügen des Submodelelemente <div> zum entsprechenden Submodel-Key <div>
-                    div.appendChild(submodelElementsDiv);
+                    console.log("bom")
+                    console.log(elements)
                 }
             }
         }
