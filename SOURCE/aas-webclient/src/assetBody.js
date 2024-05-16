@@ -136,6 +136,7 @@ const AssetBody = () => {
 
         //Die Submodel URL muss base64 encoded werden damit die JSON abgerufen werden kann
         let asset64= btoa(assetID)
+        console.log(urlSub+"/submodels/"+asset64)
         
         //hier wird das Submodel JSON abgerufen
         let bestimmtesAsset= await fetch(urlSub+"/submodels/"+asset64)
@@ -151,14 +152,16 @@ const AssetBody = () => {
 
         document.getElementById("idShort-"+assetID).innerHTML = bestimmtesAssetJson.idShort;
 
-        console.log(bestimmtesAssetJson.idShort)
-
         if (bestimmtesAssetJson.idShort === "BillOfMaterial" || bestimmtesAssetJson.idShort === "BoM" || bestimmtesAssetJson.idShort === "BillofMaterial"){
         //hier aus dem Submodel das submodel Array Elements gezogen
         let submodelElementsList= bestimmtesAssetJson.submodelElements
 
         console.log("Submodel Elements")
         console.log(submodelElementsList)
+
+        let submodelContainer = document.getElementById("submodelElements-" + assetID);
+        submodelContainer.innerHTML = "";
+        
         for(let i= 0; i<submodelElementsList.length; i++){
             let pElement= document.createElement('p')
 
