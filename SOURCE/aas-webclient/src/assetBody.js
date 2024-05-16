@@ -48,6 +48,18 @@ const AssetBody = () => {
         document.body.removeChild(link);
         window.URL.revokeObjectURL(url);
     }
+    async function openNameplateGen() {
+        const data = await fetch("http://localhost:8080/Nameplate/GenerateByReference/"+shellBody.hide.URL)
+        .then(() => {
+            const link = document.createElement('a')
+            link.href = data;
+            link.download = 'nameplate.svg';
+            document.body.appendChild(link);
+            link.click();
+            
+            document.body.removeChild(link);
+        }).catch()
+    }
 
     const buildBody = (json, id = "") => {
         let hidden = id !== "";
@@ -320,6 +332,9 @@ const AssetBody = () => {
                     </div>
                         <div className="d-flex flex-column navigation-buttons">
                             <div onClick={jsonDownload} className="navigation-button my-2 shadow-sm border rounded">JSON downloaden</div>
+                        </div>
+                        <div className="d-flex flex-column navigation-buttons">
+                            <div onClick={openNameplateGen} className="navigation-button my-2 shadow-sm border rounded">Nameplate sehen</div>
                         </div>
                 </div>
             </div>
