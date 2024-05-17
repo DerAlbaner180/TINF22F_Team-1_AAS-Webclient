@@ -40,7 +40,8 @@ const AssetBody = () => {
         // Link erstellen und klicken, um den Download zu starten
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'data.json'; // Dateiname für den Download
+        const downloadname=shellBody.read.idShort+".json";
+        link.download = downloadname; // Dateiname für den Download
         document.body.appendChild(link);
         link.click();
 
