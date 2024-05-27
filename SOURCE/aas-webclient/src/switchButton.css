@@ -1,6 +1,7 @@
 /* CSS-Styling für den Switch-Button */
 .switch {
     position: relative;
+
     display: inline-block;
     width: 60px;
     height: 34px;
@@ -57,4 +58,7 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+.switch-container{
+    align-self: flex-end;
 }

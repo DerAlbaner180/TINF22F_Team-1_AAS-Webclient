@@ -327,66 +327,14 @@ class Filter extends React.Component {
 
 
     render() {
-        const { mode } = this.state;
+        const {mode} = this.state;
         const sliderValue = mode === "user" ? 1 : 2;
-        const sort =
-            <Dropdown
-                className="my-dropdown"
-                autoClose="true"
-                variant="light"
-                align="end">
-                <DropdownToggle id="dropdown-autoclose-true">
-                    Year
-                </DropdownToggle>
-                <DropdownMenu>
-                    <DropdownItem id={"up"} onClick={() => this.sortAsYear("up")}>oldest first</DropdownItem>
-                    <DropdownItem id={"down"} onClick={() => this.sortAsYear("down")}>newest first</DropdownItem>
-                </DropdownMenu>
-            </Dropdown>;
 
-        const filter =
-            <Dropdown
-                className="mx-2 my-dropdown"
-                autoClose="outside"
-                variant="light"
-                align="end">
-                <DropdownToggle id="dropdown-autoclose-outside">
-                    Manufacturer
-                </DropdownToggle>
-                <DropdownMenu>
-                    <DropdownItem>
-                        <form
-                            className="mx-2 d-flex flex-row"
-                            onSubmit={(event) => event.preventDefault()}>
-                            <input
-                                id="manufacturerNameSearchField"
-                                type="text"
-                                className="form-control form-control-dark  w-auto"
-                                placeholder="Manufacturer"
-                            ></input>
-                            <button
-                                type="submit"
-                                className="btn btn-link mx-2 text-nowrap"
-                                onClick={this.searchForManufacturerName}>
-                                Search
-                            </button>
-                        </form>
-                        <div className={"error_message"} id="error_message_filterForManufacturerName"
-                             style={{visibility: "hidden", color: "darkred"}}>
-                            No entries found
-                        </div>
-                    </DropdownItem>
-                    {this.getManufactureName().map(element => {
-                        return <DropdownItem value={element}
-                                             onClick={() => this.filterForManufacturerName(element)}> {element} </DropdownItem>
-                    })}
-                </DropdownMenu>
-            </Dropdown>;
 
         return (
             <div className="px-3 py-1 d-flex flex-row shadow-sm bg-light align-items-center justify-content-start">
-                {window.sessionStorage.getItem("loaded") === "true" ? sort : ""}
-                {window.sessionStorage.getItem("loaded") === "true" ? filter : ""}
+
+
                 {/* Suchfeldleiste */}
                 <form autoComplete="off" onBlur={async (event) => {
                     await new Promise(resolve => setTimeout(resolve, 200));
@@ -437,7 +385,7 @@ class Filter extends React.Component {
                      style={{visibility: "hidden", color: "darkred"}}>
                     No entries found
                 </div>
-                <div>
+                <div className="switch-container">
                     <label className="switch">
                         <input
                             type="checkbox"
@@ -449,14 +397,16 @@ class Filter extends React.Component {
                     <p>{this.state.mode === 2 ? 'Expert Mode' : 'User Mode'}</p>
                 </div>
 
+
             </div>
 
 
         );
-
-
-
     }
+
+
+
+
 
 }
 

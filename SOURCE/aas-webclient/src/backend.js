@@ -200,7 +200,8 @@ async function getFullShellData() {
                     return {
                         read:{
                             idShort: element.idShort,
-                            id: id
+                            id: id,
+                            globalAssetId: element.assetInformation.globalAssetId
                         },
                         hide: {
                             assetJSON:element
